@@ -1,6 +1,14 @@
 doctype html  
 html
 	include include/header.pug
+	include include/variables.pug
 	body 
-		include include/footer.pug
+		#slider  
+			each slide in slidercontent
+				.slide-present
+					img(src=slide.img)
+					.slider-content  
+						img(src=slide.fontImage)
+						p= slide.p  
+		include include/footer.pug 
  
