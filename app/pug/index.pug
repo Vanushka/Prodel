@@ -6,9 +6,28 @@ html
 		#slider  
 			each slide in slidercontent
 				.slide-present
-					img(src=slide.img)
+					img(src=slide.img) 
 					.slider-content  
 						img(src=slide.fontImage)
-						p= slide.p  
+						p= slide.p
+		.container-foods 
+			.sale 
+				h1 SALE
+				.all-list
+					a(href="catalog.html") See all products
+				#viewedProducts 
+					each val in viewedfoods 
+						.good  
+							a(href="javascript:openProductDetail()")
+								.good-text 
+									p= val.text
+								.good-img 
+									img(src=val.img)
+								.good-price-and-unit
+									.good-price
+										p= val.price
+									//- .good-unit
+									//- 	p= val.unit 
+				.reviews-gradient
 		include include/footer.pug 
  

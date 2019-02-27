@@ -2,8 +2,12 @@ body
 	margin 0
 	width: 100%
 	overflow-x: hidden
+	.slick-slide
+		&:focus, a
+			outline: none
 	a
 		cursor pointer
+		text-decoration: none
 	header
 		width 100%
 		height 100px
@@ -70,6 +74,7 @@ body
 						:-moz-placeholder
 							color #fff
 						input[type="submit"]
+							cursor pointer
 							width 20px
 							height 20px
 							border none
@@ -107,9 +112,12 @@ body
 					white-space: nowrap
 					align-items: center
 					a
+						text-decoration: none
 						font-size: 18px
 						color: #fff
 						font-family 'PT-Sans-Regular'
+						&:hover
+							color #f7941d
 		.zigzag
 			background #3A1955
 			position relative
@@ -158,7 +166,7 @@ body
 		text-align center
 		margin 0 auto
 		float right
-		right 71.6px
+		right -22px
 		top 0
 		z-index 2
 		&:hover
@@ -216,7 +224,6 @@ body
 			display: block
 		p
 			margin-left: 30px
-			margin-right: 30px
 			a
 				margin: 0
 				color: #f7941d
@@ -284,7 +291,7 @@ body
 
 .pager
 	width 20px
-	height 1.5px
+	height 2px
 	opacity 0.19
 	position absolute
 	background-color #fff
@@ -300,12 +307,123 @@ ul,li
 	display inline
 	margin-right 25px
 
+.container-foods
+	// max-width 1280px
+	padding-bottom 0 !important
+	padding-left 60px
+	.sale
+		margin: 65px auto
+		display: block
+		h1
+			color #EF4136
+			font-size 20px
+			font-family 'Roboto-Bold'
+			text-transform uppercase
+			margin-bottom 25px
+			letter-spacing 2px
+			span
+				color $grey
+				margin-left 15px
+				font-size 16px
+				font-family 'Roboto-Regular'
+				font-weight 100
+				letter-spacing 0
+		.all-list
+			float right
+			margin-top -45px
+			margin-right 20px
+			margin-right 9%
+			a
+				color #000
+				font-size 13px
+				background: #EFEFED
+				font-family 'PT-Sans-Regular'
+				padding: 8px 20px
+				border-radius: 9px
+		#viewedProducts
+			width 100%
+			display flex
+			flex-wrap wrap
+			&:focus
+				outline: none
+			.good
+				outline: none
+				display block
+				width 181.27px
+				height auto
+				min-height 208px
+				background: #fff
+				transition: 0.25s
+				border 1px solid #DEDEDE
+				&:hover
+					transition: 0.25s
+					-webkit-transform: scale(1.01)
+					-ms-transform: scale(1.01)
+					transform: scale(1.01)
+					box-shadow: 0 6px 30px rgba(0,0,0,0.15)
+				&:focus
+					outline: none
+				a
+					.good-img
+						width 62px
+						height auto
+						margin 0 auto
+						img
+							width 100%
+					.good-text
+						width 160px
+						height auto
+						min-height 61px
+						color #000
+						margin 0 auto
+						font-size 15px
+						text-align: center
+						font-family 'PT-Sans-Regular'
+						p
+							margin 0
+							margin-top 10px
+							margin-bottom: 10px
+							word-wrap break-word
+					.good-price-and-unit
+						display flex
+						margin-top: 27px
+						justify-content space-between
+						.good-price
+							min-width 36px
+							white-space nowrap
+							height 19px
+							margin 2px 17px
+							p
+								margin 0
+								color #000
+								font-size 17px
+								font-family 'OpenSans-Bold'
+						.good-unit
+							min-width 52px
+							white-space nowrap
+							height 23px
+							margin-top 2px
+							margin 2px 17px
+							p
+								margin 0
+								color #000
+								text-align right
+								font-size 15px
+								font-family 'PT-Sans-Regular'
+		.reviews-gradient
+			width: 343px
+			height: 565px
+			position: relative
+			float: right
+			right: -2px
+			margin-top: -500px
+			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(246, 246, 245, 0.04) 25%, #fff 100%)
 footer
 	width: 100%
 	height: auto
 	background: #3A1955
 	.container
-		height: 229px
+		height: 250px
 		margin: 0 auto
 		max-width: 1280px
 		display: block
@@ -327,28 +445,47 @@ footer
 						color: #fff
 						font-size: 14px
 						margin-right: 45px
+						display: flex
+						flex-direction: column
 						text-decoration: underline
 						font-family 'OpenSans-Light'
+						a
+							margin-bottom: 10px
+							&:hover
+								color #f7941d
 					.right
 						color: #fff
 						font-size: 14px
+						display: flex
+						flex-direction: column
 						text-decoration: underline
 						font-family 'OpenSans-Light'
+						a
+							margin-bottom: 10px
+							&:hover
+								color #f7941d
 			.footer-right
 				float: right
 				display: block
 				padding-top: 40px
-				.tel
+				a.tel
 					color: #fff
 					font-size: 22px
 					text-decoration: none
 					font-family 'OpenSans-Bold'
-				.mail
+					&:hover
+						color #f7941d
+				a.mail
 					color: #fff
+					float: right
 					font-size: 14px
+					padding-top: 10px
 					text-decoration: underline
 					font-family 'PT-Sans-Regular'
+					&:hover
+						color #f7941d
 				.cards
+					margin-top: 60px
 					width: 192px
 					height: 34px
 					img
@@ -360,4 +497,12 @@ footer
 		background-size: cover
 		background-repeat: no-repeat
 		background-image: url(../img/footer-back.jpg)
+		.container
+			margin: 0 auto
+			height: inherit
+			max-width: 1280px
+			display: flex
+			align-items: center
+			a
+				margin-left: 10px
 @import '/fonts.styl'
