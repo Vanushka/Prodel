@@ -1,0 +1,252 @@
+.catalog-block-fon {
+  width: 100%;
+  background-size: cover;
+  height: 460px;
+  margin-top: 50px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/catalog-fon.png");
+}
+.catalog-block-fon:after {
+  content: "";
+  width: 100%;
+  height: 410px;
+  position: absolute;
+  margin-top: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.25) 28%, rgba(246,246,245,0.5) 60%, #fff 100%);
+}
+.catalog-block-fon .headline {
+  z-index: 10;
+  margin-top: 145px;
+}
+.catalog-block-fon .headline .bread-crumbs-block {
+  text-align: center;
+}
+.catalog-block-fon .headline .bread-crumbs-block a {
+  color: #707070;
+  font-size: 13px;
+  font-family: 'PT-Sans-Regular';
+}
+.catalog-block-fon .headline .bread-crumbs-block a:hover {
+  text-decoration: underline;
+}
+.catalog-block-fon .headline .bread-crumbs-block span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.catalog-block-fon .headline h1 {
+  font-size: 26px;
+  font-family: 'OpenSans-Bold';
+}
+.container-catalog {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row-reverse;
+      flex-flow: row-reverse;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: 1280px;
+  padding-left: 60px;
+  margin-bottom: 100px;
+}
+.container-catalog .sale {
+  height: auto;
+  margin: 0 auto;
+  margin-top: -190px;
+  z-index: 1000;
+  display: block;
+}
+.container-catalog .sale .filter-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  height: 55px;
+}
+.container-catalog .sale .filter-block a.filter {
+  width: 49px;
+  height: 16px;
+  padding: 9px 5px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  font-family: 'PT-Sans-Regular';
+  background: rgba(112,112,112,0.5);
+}
+.container-catalog .sale .filter-block a.filter:hover {
+  transition: all 0.3s ease;
+  background: #707070;
+}
+.container-catalog .sale .filter-block .price {
+  width: 76px;
+  height: 16px;
+  padding: 9px 5px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  font-family: 'PT-Sans-Regular';
+  background: rgba(112,112,112,0.5);
+}
+.container-catalog .sale .filter-block .price svg {
+  margin-left: 14px;
+}
+.container-catalog .sale .filter-block .price:hover {
+  transition: all 0.3s ease;
+  background: #707070;
+}
+.container-catalog .sale #waterProducts {
+  width: 100%;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.container-catalog .sale #waterProducts:focus {
+  outline: none;
+}
+.container-catalog .sale #waterProducts .good {
+  outline: none;
+  display: block;
+  width: 230px;
+  height: auto;
+  min-height: 275px;
+  background: #fff;
+  transition: 0.25s;
+  border: 1px solid #dedede;
+}
+.container-catalog .sale #waterProducts .good:hover {
+  transition: 0.25s;
+  -ms-transform: scale(1.001);
+  transform: scale(1.001);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+.container-catalog .sale #waterProducts .good:focus {
+  outline: none;
+}
+.container-catalog .sale #waterProducts .good a .good-img {
+  width: 112px;
+  height: auto;
+  margin: 0 auto;
+}
+.container-catalog .sale #waterProducts .good a .good-img img {
+  width: 100%;
+}
+.container-catalog .sale #waterProducts .good a .good-text {
+  width: 160px;
+  height: auto;
+  min-height: 61px;
+  color: #000;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'PT-Sans-Regular';
+}
+.container-catalog .sale #waterProducts .good a .good-text p {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 27px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-price {
+  min-width: 36px;
+  white-space: nowrap;
+  height: 19px;
+  margin: 2px 17px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-price p {
+  margin: 0;
+  color: #000;
+  font-size: 17px;
+  font-family: 'OpenSans-Bold';
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit {
+  white-space: nowrap;
+  height: 23px;
+  margin-top: 2px;
+  margin: 2px 17px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover {
+  background: #ef4136;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover:before {
+  background: #fff;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-left: 6.4px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  margin-left: 6.4px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+  background-color: #ef4136;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus:after {
+  background: #fff;
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 14px;
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  margin-top: 12px;
+  margin-left: 6.4px;
+}

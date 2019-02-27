@@ -1,0 +1,199 @@
+.catalog-block-fon
+	width: 100%
+	background-size: cover
+	height: 460px
+	margin-top: 50px
+	margin: 0 auto
+	display: flex
+	justify-content: center
+	background-repeat: no-repeat
+	background-image: url(../img/vegetables-fon.png)
+	&:after
+		content: ""
+		width: 100%
+		height: 410px
+		position: absolute
+		margin-top: 50px
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.25) 28%, rgba(246, 246, 245, 0.5) 60%, #fff 100%)
+	.headline
+		z-index: 10
+		margin-top: 145px
+		.bread-crumbs-block
+			text-align: center
+			a
+				color: #707070
+				font-size: 13px
+				font-family: 'PT-Sans-Regular'
+				&:hover
+					text-decoration: underline
+			span
+				margin-left: 15px
+				margin-right: 15px
+		h1
+			font-size: 26px
+			font-family: 'OpenSans-Bold'
+.container-catalog
+	margin: 0 auto
+	display: flex
+	flex-flow: row-reverse
+	height: max-content
+	max-width 1280px
+	padding-left 60px
+	margin-bottom: 100px
+	.sale
+		height: auto
+		margin: 0 auto
+		margin-top: -190px
+		z-index: 1000
+		display: block
+		.filter-block
+			display: flex
+			justify-content: space-between
+			width: 1160px
+			margin: 0 auto
+			height: 55px
+			a.filter
+				width: 49px
+				height: 16px
+				padding: 9px 5px
+				color: #fff
+				text-align: center
+				border-radius: 10px
+				font-size: 13px
+				transition: all 0.3s ease
+				font-family: 'PT-Sans-Regular'
+				background: rgba(112,112,112,0.5)
+				&:hover
+					transition: all 0.3s ease
+					background: #707070
+			.price
+				width: 76px
+				height: 16px
+				padding: 9px 5px
+				color: #fff
+				text-align: center
+				border-radius: 10px
+				font-size: 13px
+				transition: all 0.3s ease
+				font-family: 'PT-Sans-Regular'
+				background: rgba(112,112,112,0.5)
+				svg
+					margin-left: 14px
+				&:hover
+					transition: all 0.3s ease
+					background: #707070
+		#waterProducts
+			width 100%
+			height: auto
+			display flex
+			justify-content: center
+			flex-wrap wrap
+			&:focus
+				outline: none
+			.good
+				outline: none
+				display block
+				width 230px
+				height auto
+				min-height 275px
+				background: #fff
+				transition: 0.25s
+				border 1px solid #DEDEDE
+				&:hover
+					transition: 0.25s
+					-webkit-transform: scale(1.001)
+					-ms-transform: scale(1.001)
+					transform: scale(1.001)
+					box-shadow: 0 6px 30px rgba(0,0,0,0.15)
+				&:focus
+					outline: none
+				a
+					.good-img
+						width 112px
+						height auto
+						margin 0 auto
+						img
+							width 100%
+					.good-text
+						width 160px
+						height auto
+						min-height 61px
+						color #000
+						margin 0 auto
+						font-size 15px
+						text-align: center
+						font-family 'PT-Sans-Regular'
+						p
+							margin 0
+							margin-top 20px
+							margin-bottom: 20px
+							word-wrap break-word
+					.good-price-and-unit
+						display flex
+						margin-top: 27px
+						justify-content space-between
+						.good-price
+							min-width 36px
+							white-space nowrap
+							height 19px
+							margin 2px 17px
+							p
+								margin 0
+								color #000
+								font-size 17px
+								font-family 'OpenSans-Bold'
+						.good-unit
+							white-space nowrap
+							height 23px
+							margin-top 2px
+							margin 2px 17px
+							.plus
+								width 27px
+								height 26px
+								border-radius 8px
+								&:hover
+									background #EF4136
+									&:after,&:before
+										background: #fff
+								&:after
+									content ""
+									pointer-events:none
+									position absolute
+									background #707070
+									height 2px
+									width 14px
+									margin-top 12px
+									transition: all 0.5s ease
+									transform rotate(0deg)
+									margin-left 6.4px
+								&:before
+									content ""
+									pointer-events:none
+									position absolute
+									background #707070
+									height 2px
+									width 14px
+									margin-top 12px
+									transition: all 0.5s ease
+									transform rotate(90deg)
+									margin-left 6.4px
+							.minus
+								width 27px
+								height 26px
+								border-radius 8px
+								background-color #EF4136
+								&:after
+									background #fff
+									transition: all 0.5s ease !important
+									transform rotate(90deg)
+								&:before
+									content ""
+									pointer-events:none
+									position absolute
+									background #fff
+									height 2px
+									width 14px
+									transition: all 0.5s ease !important
+									transform rotate(180deg)
+									margin-top 12px
+									margin-left 6.4px

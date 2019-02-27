@@ -1,0 +1,47 @@
+doctype html  
+html
+	include include/header.pug
+	include include/variables.pug
+	body
+		.catalog-block-fon
+			.headline
+				.bread-crumbs-block
+					a(href='') Catalog
+					span
+						img(src='./dist/img/crambnext.svg')
+					a(href='#') Fruits & Vegetables
+				h1 VEGETABLES
+		.container-catalog
+			.sale 
+				.filter-block
+					a.filter Filter
+					a.price Price
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.336" height="10" viewBox="0 0 12.336 10">
+							<defs>
+								<clipPath id="clip-path">
+									<rect width="12.336" height="10" fill="none"/>
+								</clipPath>
+							</defs>
+							<g id="Repeat_Grid_19" data-name="Repeat Grid 19" clip-path="url(#clip-path)">
+								<g id="Group_162" data-name="Group 162" transform="translate(-1191.832 -385)">
+									<rect id="Rectangle_82" data-name="Rectangle 82" width="12.336" height="2" transform="translate(1191.832 385)" fill="#fff"/>
+									<rect id="Rectangle_82-2" data-name="Rectangle 82" width="8.336" height="2" transform="translate(1193.832 389)" fill="#fff"/>
+									<rect id="Rectangle_82-3" data-name="Rectangle 82" width="2" height="2" transform="translate(1197 393)" fill="#fff"/>
+								</g>
+							</g>
+						</svg>
+				#waterProducts 
+					each val in water  
+						.good  
+							a(href="javascript:openProductDetail()")
+								.good-text 
+									p= val.text
+								.good-img      
+									img(src=val.img)
+								.good-price-and-unit
+									.good-price
+										p= val.price
+									.good-unit
+										.plus 
+		include include/footer.pug 
+ 

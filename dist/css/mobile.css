@@ -45,6 +45,9 @@
     -ms-transform: none;
     transform: none;
   }
+  body {
+    min-width: 100%;
+  }
   body header {
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -340,5 +343,35 @@
   footer .footer-down .container {
     -ms-flex-pack: center;
         justify-content: center;
+  }
+}
+@media screen and (max-device-width: 768px) {
+  .catalog-block-fon:after {
+    height: 460px;
+    margin-top: 0;
+  }
+  .catalog-block-fon .headline {
+    margin-top: 60px;
+  }
+  .container-catalog {
+    padding-left: 0;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+  .container-catalog .sale {
+    margin-top: -270px;
+  }
+  .container-catalog .sale .filter-block {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container-catalog .sale .filter-block .filter,
+  .container-catalog .sale .filter-block .price {
+    z-index: 10;
+  }
+  .container-catalog .sale #waterProducts .good {
+    z-index: 10;
   }
 }

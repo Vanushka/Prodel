@@ -1,6 +1,7 @@
 body {
   margin: 0;
   width: 100%;
+  min-width: 1295px;
   overflow-x: hidden;
 }
 body .slick-slide:focus,
@@ -13,7 +14,11 @@ body .slick-list {
 }
 body a {
   cursor: pointer;
+  transition: all 0.3s ease;
   text-decoration: none;
+}
+body a:hover {
+  transition: all 0.3s ease;
 }
 body header {
   width: 100%;
@@ -32,13 +37,14 @@ body header #header .overlay {
   display: none;
 }
 body header #header .container {
-  padding-top: 10px;
+  width: 100%;
+  padding-top: 36px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row;
       flex-flow: row;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 1280px;
 }
 body header #header .container .logo {
@@ -49,7 +55,6 @@ body header #header .container .logo {
 body header #header .container .search {
   width: 560px;
   height: 40px;
-  margin-top: 22px;
   border-radius: 8px;
   background: #5d2f88;
   display: -ms-flexbox;
@@ -218,9 +223,9 @@ body header .zigzag:after {
   -ms-flex-align: center;
       align-items: center;
   text-align: center;
-  margin: 0 auto;
+  margin-left: auto;
   float: right;
-  right: -22px;
+  right: 0;
   top: 0;
   z-index: 2;
 }
@@ -252,7 +257,6 @@ body header .zigzag:after {
   -ms-flex-align: center;
       align-items: center;
   text-align: center;
-  margin: 0 auto;
   font-family: 'OpenSans-Light';
   color: #fff;
   float: left;
@@ -266,8 +270,10 @@ body header .zigzag:after {
   margin-left: 30px;
 }
 .container .left-group-links a.catalog {
+  color: #fff;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 0;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-flow: row-reverse;
@@ -435,9 +441,11 @@ li {
   font-family: 'PT-Sans-Regular';
   padding: 8px 20px;
   border-radius: 9px;
+  transition: all 0.3s ease;
 }
 .container-foods .sale .all-list a:hover {
   color: #fff;
+  transition: all 0.3s ease;
   background: #ef4136;
 }
 .container-foods .sale #viewedProducts {
@@ -567,7 +575,7 @@ li {
 }
 .container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus:after {
   background: #fff;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease !important;
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
 }
@@ -578,34 +586,9 @@ li {
   background: #fff;
   height: 2px;
   width: 14px;
-  transition: all 0.5s ease;
-  -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
-  margin-top: 12px;
-  margin-left: 6.4px;
-}
-.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus {
-  width: 27px;
-  height: 26px;
-  border-radius: 8px;
-  background-color: #ef4136;
-}
-.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus:after {
-  background: #fff;
-  transition: all 0.5s ease;
-  -ms-transform: rotate(90deg);
-      transform: rotate(90deg);
-}
-.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus:before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  background: #fff;
-  height: 2px;
-  width: 14px;
-  transition: all 0.5s ease;
-  -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
   margin-top: 12px;
   margin-left: 6.4px;
 }
@@ -657,9 +640,11 @@ li {
   font-family: 'PT-Sans-Regular';
   padding: 8px 20px;
   border-radius: 9px;
+  transition: all 0.3s ease;
 }
 .container-popular .sale .all-list a:hover {
   color: #fff;
+  transition: all 0.3s ease;
   background: #ef4136;
 }
 .container-popular .sale #popularProducts {
@@ -787,7 +772,7 @@ li {
 }
 .container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .minus:after {
   background: #fff;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease !important;
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
 }
@@ -798,9 +783,9 @@ li {
   background: #fff;
   height: 2px;
   width: 14px;
-  transition: all 0.5s ease;
-  -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
   margin-top: 12px;
   margin-left: 6.4px;
 }
@@ -864,11 +849,13 @@ li {
   font-family: 'PT-Sans-Regular';
   padding: 8px 20px;
   border-radius: 9px;
+  transition: all 0.3s ease;
 }
 .container-water .sale .all-list a:hover,
 .container-fruits .sale .all-list a:hover,
 .container-milk .sale .all-list a:hover {
   color: #fff;
+  transition: all 0.3s ease;
   background: #ef4136;
 }
 .container-water .sale #water,
@@ -1174,7 +1161,7 @@ li {
 .container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:after,
 .container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:after {
   background: #fff;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease !important;
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
 }
@@ -1193,9 +1180,9 @@ li {
   background: #fff;
   height: 2px;
   width: 14px;
-  transition: all 0.5s ease;
-  -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
   margin-top: 12px;
   margin-left: 6.4px;
 }
@@ -1254,6 +1241,7 @@ footer .container .footer-up .footer-left .links-block .left {
   font-family: 'OpenSans-Light';
 }
 footer .container .footer-up .footer-left .links-block .left a {
+  color: #fff;
   margin-bottom: 10px;
 }
 footer .container .footer-up .footer-left .links-block .left a:hover {
@@ -1270,6 +1258,7 @@ footer .container .footer-up .footer-left .links-block .right {
   font-family: 'OpenSans-Light';
 }
 footer .container .footer-up .footer-left .links-block .right a {
+  color: #fff;
   margin-bottom: 10px;
 }
 footer .container .footer-up .footer-left .links-block .right a:hover {
@@ -1295,7 +1284,7 @@ footer .container .footer-up .footer-right a.mail {
   font-size: 14px;
   padding-top: 10px;
   text-decoration: underline;
-  font-family: 'PT-Sans-Regular';
+  font-family: 'Roboto-Regular';
 }
 footer .container .footer-up .footer-right a.mail:hover {
   color: #f7941d;
@@ -1393,6 +1382,510 @@ footer .footer-down .container a {
   font-weight: 700;
   font-style: normal;
 }
+.catalog-block-fon {
+  width: 100%;
+  background-size: cover;
+  height: 460px;
+  margin-top: 50px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/catalog-fon.png");
+}
+.catalog-block-fon:after {
+  content: "";
+  width: 100%;
+  height: 410px;
+  position: absolute;
+  margin-top: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.25) 28%, rgba(246,246,245,0.5) 60%, #fff 100%);
+}
+.catalog-block-fon .headline {
+  z-index: 10;
+  margin-top: 145px;
+}
+.catalog-block-fon .headline .bread-crumbs-block {
+  text-align: center;
+}
+.catalog-block-fon .headline .bread-crumbs-block a {
+  color: #707070;
+  font-size: 13px;
+  font-family: 'PT-Sans-Regular';
+}
+.catalog-block-fon .headline .bread-crumbs-block a:hover {
+  text-decoration: underline;
+}
+.catalog-block-fon .headline .bread-crumbs-block span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.catalog-block-fon .headline h1 {
+  font-size: 26px;
+  font-family: 'OpenSans-Bold';
+}
+.container-catalog {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row-reverse;
+      flex-flow: row-reverse;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: 1280px;
+  padding-left: 60px;
+  margin-bottom: 100px;
+}
+.container-catalog .sale {
+  height: auto;
+  margin: 0 auto;
+  margin-top: -190px;
+  z-index: 1000;
+  display: block;
+}
+.container-catalog .sale .filter-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  height: 55px;
+}
+.container-catalog .sale .filter-block a.filter {
+  width: 49px;
+  height: 16px;
+  padding: 9px 5px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  font-family: 'PT-Sans-Regular';
+  background: rgba(112,112,112,0.5);
+}
+.container-catalog .sale .filter-block a.filter:hover {
+  transition: all 0.3s ease;
+  background: #707070;
+}
+.container-catalog .sale .filter-block .price {
+  width: 76px;
+  height: 16px;
+  padding: 9px 5px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  font-family: 'PT-Sans-Regular';
+  background: rgba(112,112,112,0.5);
+}
+.container-catalog .sale .filter-block .price svg {
+  margin-left: 14px;
+}
+.container-catalog .sale .filter-block .price:hover {
+  transition: all 0.3s ease;
+  background: #707070;
+}
+.container-catalog .sale #waterProducts {
+  width: 100%;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.container-catalog .sale #waterProducts:focus {
+  outline: none;
+}
+.container-catalog .sale #waterProducts .good {
+  outline: none;
+  display: block;
+  width: 230px;
+  height: auto;
+  min-height: 275px;
+  background: #fff;
+  transition: 0.25s;
+  border: 1px solid #dedede;
+}
+.container-catalog .sale #waterProducts .good:hover {
+  transition: 0.25s;
+  -ms-transform: scale(1.001);
+  transform: scale(1.001);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+.container-catalog .sale #waterProducts .good:focus {
+  outline: none;
+}
+.container-catalog .sale #waterProducts .good a .good-img {
+  width: 112px;
+  height: auto;
+  margin: 0 auto;
+}
+.container-catalog .sale #waterProducts .good a .good-img img {
+  width: 100%;
+}
+.container-catalog .sale #waterProducts .good a .good-text {
+  width: 160px;
+  height: auto;
+  min-height: 61px;
+  color: #000;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'PT-Sans-Regular';
+}
+.container-catalog .sale #waterProducts .good a .good-text p {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 27px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-price {
+  min-width: 36px;
+  white-space: nowrap;
+  height: 19px;
+  margin: 2px 17px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-price p {
+  margin: 0;
+  color: #000;
+  font-size: 17px;
+  font-family: 'OpenSans-Bold';
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit {
+  white-space: nowrap;
+  height: 23px;
+  margin-top: 2px;
+  margin: 2px 17px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover {
+  background: #ef4136;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover:before {
+  background: #fff;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-left: 6.4px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  margin-left: 6.4px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+  background-color: #ef4136;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus:after {
+  background: #fff;
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 14px;
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  margin-top: 12px;
+  margin-left: 6.4px;
+}
+.catalog-block-fon {
+  width: 100%;
+  background-size: cover;
+  height: 460px;
+  margin-top: 50px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/vegetables-fon.png");
+}
+.catalog-block-fon:after {
+  content: "";
+  width: 100%;
+  height: 410px;
+  position: absolute;
+  margin-top: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.25) 28%, rgba(246,246,245,0.5) 60%, #fff 100%);
+}
+.catalog-block-fon .headline {
+  z-index: 10;
+  margin-top: 145px;
+}
+.catalog-block-fon .headline .bread-crumbs-block {
+  text-align: center;
+}
+.catalog-block-fon .headline .bread-crumbs-block a {
+  color: #707070;
+  font-size: 13px;
+  font-family: 'PT-Sans-Regular';
+}
+.catalog-block-fon .headline .bread-crumbs-block a:hover {
+  text-decoration: underline;
+}
+.catalog-block-fon .headline .bread-crumbs-block span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.catalog-block-fon .headline h1 {
+  font-size: 26px;
+  font-family: 'OpenSans-Bold';
+}
+.container-catalog {
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row-reverse;
+      flex-flow: row-reverse;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: 1280px;
+  padding-left: 60px;
+  margin-bottom: 100px;
+}
+.container-catalog .sale {
+  height: auto;
+  margin: 0 auto;
+  margin-top: -190px;
+  z-index: 1000;
+  display: block;
+}
+.container-catalog .sale .filter-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  height: 55px;
+}
+.container-catalog .sale .filter-block a.filter {
+  width: 49px;
+  height: 16px;
+  padding: 9px 5px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  font-family: 'PT-Sans-Regular';
+  background: rgba(112,112,112,0.5);
+}
+.container-catalog .sale .filter-block a.filter:hover {
+  transition: all 0.3s ease;
+  background: #707070;
+}
+.container-catalog .sale .filter-block .price {
+  width: 76px;
+  height: 16px;
+  padding: 9px 5px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  font-family: 'PT-Sans-Regular';
+  background: rgba(112,112,112,0.5);
+}
+.container-catalog .sale .filter-block .price svg {
+  margin-left: 14px;
+}
+.container-catalog .sale .filter-block .price:hover {
+  transition: all 0.3s ease;
+  background: #707070;
+}
+.container-catalog .sale #waterProducts {
+  width: 100%;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.container-catalog .sale #waterProducts:focus {
+  outline: none;
+}
+.container-catalog .sale #waterProducts .good {
+  outline: none;
+  display: block;
+  width: 230px;
+  height: auto;
+  min-height: 275px;
+  background: #fff;
+  transition: 0.25s;
+  border: 1px solid #dedede;
+}
+.container-catalog .sale #waterProducts .good:hover {
+  transition: 0.25s;
+  -ms-transform: scale(1.001);
+  transform: scale(1.001);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+.container-catalog .sale #waterProducts .good:focus {
+  outline: none;
+}
+.container-catalog .sale #waterProducts .good a .good-img {
+  width: 112px;
+  height: auto;
+  margin: 0 auto;
+}
+.container-catalog .sale #waterProducts .good a .good-img img {
+  width: 100%;
+}
+.container-catalog .sale #waterProducts .good a .good-text {
+  width: 160px;
+  height: auto;
+  min-height: 61px;
+  color: #000;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'PT-Sans-Regular';
+}
+.container-catalog .sale #waterProducts .good a .good-text p {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 27px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-price {
+  min-width: 36px;
+  white-space: nowrap;
+  height: 19px;
+  margin: 2px 17px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-price p {
+  margin: 0;
+  color: #000;
+  font-size: 17px;
+  font-family: 'OpenSans-Bold';
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit {
+  white-space: nowrap;
+  height: 23px;
+  margin-top: 2px;
+  margin: 2px 17px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover {
+  background: #ef4136;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:hover:before {
+  background: #fff;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-left: 6.4px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .plus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  margin-left: 6.4px;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+  background-color: #ef4136;
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus:after {
+  background: #fff;
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+.container-catalog .sale #waterProducts .good a .good-price-and-unit .good-unit .minus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 14px;
+  transition: all 0.5s ease !important;
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  margin-top: 12px;
+  margin-left: 6.4px;
+}
 @media screen and (max-device-width: 768px) {
   .reviews-gradient {
     display: none;
@@ -1439,6 +1932,9 @@ footer .footer-down .container a {
   .container-milk .sale #fruits .slick-list .good:hover {
     -ms-transform: none;
     transform: none;
+  }
+  body {
+    min-width: 100%;
   }
   body header {
     height: -webkit-max-content;
@@ -1735,5 +2231,35 @@ footer .footer-down .container a {
   footer .footer-down .container {
     -ms-flex-pack: center;
         justify-content: center;
+  }
+}
+@media screen and (max-device-width: 768px) {
+  .catalog-block-fon:after {
+    height: 460px;
+    margin-top: 0;
+  }
+  .catalog-block-fon .headline {
+    margin-top: 60px;
+  }
+  .container-catalog {
+    padding-left: 0;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+  .container-catalog .sale {
+    margin-top: -270px;
+  }
+  .container-catalog .sale .filter-block {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container-catalog .sale .filter-block .filter,
+  .container-catalog .sale .filter-block .price {
+    z-index: 10;
+  }
+  .container-catalog .sale #waterProducts .good {
+    z-index: 10;
   }
 }

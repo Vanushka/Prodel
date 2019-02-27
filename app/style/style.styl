@@ -1,6 +1,7 @@
 body
 	margin 0
 	width: 100%
+	min-width: 1295px
 	overflow-x: hidden
 	.slick-slide
 		&:focus, a
@@ -10,7 +11,10 @@ body
 		padding-bottom: 30px
 	a
 		cursor pointer
+		transition: all 0.3s ease
 		text-decoration: none
+		&:hover
+			transition: all 0.3s ease
 	header
 		width 100%
 		height 100px
@@ -24,12 +28,13 @@ body
 			.navBurger, .overlay
 				display none
 			.container
-				padding-top 10px
+				width: 100%
+				padding-top 36px
 				display -ms-flexbox
 				display flex
 				flex-flow: row
 				-ms-flex-pack center
-				justify-content center
+				justify-content: space-between
 				max-width 1280px
 				.logo
 					display: flex
@@ -37,7 +42,6 @@ body
 				.search
 					width: 560px
 					height: 40px
-					margin-top: 22px
 					border-radius: 8px
 					background: #5d2f88
 					display: flex
@@ -169,9 +173,9 @@ body
 		background #ef4136
 		align-items center
 		text-align center
-		margin 0 auto
+		margin-left auto
 		float right
-		right -22px
+		right 0
 		top 0
 		z-index 2
 		&:hover
@@ -197,7 +201,6 @@ body
 		height: 44px
 		align-items: center
 		text-align: center
-		margin: 0 auto
 		font-family: 'OpenSans-Light'
 		color: #fff
 		float: left
@@ -208,7 +211,9 @@ body
 		a
 			margin-left: 30px
 		a.catalog
+			color: #fff
 			display: flex
+			margin-left: 0
 			align-items: center
 			flex-flow: row-reverse
 			svg
@@ -348,8 +353,10 @@ ul,li
 				font-family 'PT-Sans-Regular'
 				padding: 8px 20px
 				border-radius: 9px
+				transition: all 0.3s ease
 				&:hover
 					color #fff
+					transition: all 0.3s ease
 					background: #ef4136
 		#viewedProducts
 			width 100%
@@ -453,7 +460,7 @@ ul,li
 									background-color #EF4136
 									&:after
 										background #fff
-										transition: all 0.5s ease
+										transition: all 0.5s ease !important
 										transform rotate(90deg)
 									&:before
 										content ""
@@ -462,28 +469,8 @@ ul,li
 										background #fff
 										height 2px
 										width 14px
-										transition: all 0.5s ease
-										transform rotate(0deg)
-										margin-top 12px
-										margin-left 6.4px
-								.minus
-									width 27px
-									height 26px
-									border-radius 8px
-									background-color #EF4136
-									&:after
-										background #fff
-										transition: all 0.5s ease
-										transform rotate(90deg)
-									&:before
-										content ""
-										pointer-events:none
-										position absolute
-										background #fff
-										height 2px
-										width 14px
-										transition: all 0.5s ease
-										transform rotate(0deg)
+										transition: all 0.5s ease !important
+										transform rotate(180deg)
 										margin-top 12px
 										margin-left 6.4px
 		.reviews-gradient
@@ -528,8 +515,10 @@ ul,li
 				font-family 'PT-Sans-Regular'
 				padding: 8px 20px
 				border-radius: 9px
+				transition: all 0.3s ease
 				&:hover
 					color #fff
+					transition: all 0.3s ease
 					background: #ef4136
 		#popularProducts
 			width 100%
@@ -632,7 +621,7 @@ ul,li
 								background-color #EF4136
 								&:after
 									background #fff
-									transition: all 0.5s ease
+									transition: all 0.5s ease !important
 									transform rotate(90deg)
 								&:before
 									content ""
@@ -641,8 +630,8 @@ ul,li
 									background #fff
 									height 2px
 									width 14px
-									transition: all 0.5s ease
-									transform rotate(0deg)
+									transition: all 0.5s ease !important
+									transform rotate(180deg)
 									margin-top 12px
 									margin-left 6.4px
 		.reviews-gradient
@@ -688,8 +677,10 @@ ul,li
 				font-family 'PT-Sans-Regular'
 				padding: 8px 20px
 				border-radius: 9px
+				transition: all 0.3s ease
 				&:hover
 					color #fff
+					transition: all 0.3s ease
 					background: #ef4136
 		#water, #fruits, #milk
 			width 100%
@@ -793,7 +784,7 @@ ul,li
 									background-color #EF4136
 									&:after
 										background #fff
-										transition: all 0.5s ease
+										transition: all 0.5s ease !important
 										transform rotate(90deg)
 									&:before
 										content ""
@@ -802,8 +793,8 @@ ul,li
 										background #fff
 										height 2px
 										width 14px
-										transition: all 0.5s ease
-										transform rotate(0deg)
+										transition: all 0.5s ease !important
+										transform rotate(180deg)
 										margin-top 12px
 										margin-left 6.4px
 		.reviews-gradient
@@ -847,6 +838,7 @@ footer
 						text-decoration: underline
 						font-family 'OpenSans-Light'
 						a
+							color: #fff
 							margin-bottom: 10px
 							&:hover
 								color #f7941d
@@ -858,6 +850,7 @@ footer
 						text-decoration: underline
 						font-family 'OpenSans-Light'
 						a
+							color: #fff
 							margin-bottom: 10px
 							&:hover
 								color #f7941d
@@ -878,7 +871,7 @@ footer
 					font-size: 14px
 					padding-top: 10px
 					text-decoration: underline
-					font-family 'PT-Sans-Regular'
+					font-family 'Roboto-Regular'
 					&:hover
 						color #f7941d
 				.cards
@@ -903,4 +896,6 @@ footer
 			a
 				margin-left: 10px
 @import '/fonts.styl'
+@import '/water.styl'
+@import '/vegetables.styl'
 @import '/mobile.styl'

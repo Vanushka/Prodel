@@ -15,6 +15,7 @@
 							-ms-transform: none
 							transform: none
 	body
+		min-width: 100%
 		header
 			height: max-content
 			#header
@@ -237,3 +238,29 @@
 			background-image: url("../img/footer-mobile.jpg")
 			.container
 				justify-content: center
+
+
+//--WATER-PAGE--
+
+@media screen and (max-device-width: 768px)
+	.catalog-block-fon
+		&:after
+			height: 460px
+			margin-top: 0
+		.headline
+			margin-top: 60px
+	.container-catalog
+		padding-left: 0
+		max-width: 100%
+		width: 100%
+		display: block
+		.sale
+			margin-top: -270px
+			.filter-block
+				width: 100%
+				justify-content: space-around
+				.filter, .price
+					z-index: 10
+			#waterProducts
+				.good
+					z-index: 10
