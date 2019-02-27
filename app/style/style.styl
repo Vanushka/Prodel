@@ -5,6 +5,9 @@ body
 	.slick-slide
 		&:focus, a
 			outline: none
+	.slick-list
+		padding-top: 15px
+		padding-bottom: 30px
 	a
 		cursor pointer
 		text-decoration: none
@@ -18,6 +21,8 @@ body
 			display flex
 			-ms-flex-pack center
 			justify-content center
+			.navBurger, .overlay
+				display none
 			.container
 				padding-top 10px
 				display -ms-flexbox
@@ -86,10 +91,10 @@ body
 					.download
 						a
 							font-size: 15px
-							color: #f7941d
+							color: #fff
 							font-family 'OpenSans-Light'
 							&:hover
-								color #fff
+								color #f7941d
 					.login
 						display: flex
 						white-space: nowrap
@@ -198,6 +203,8 @@ body
 		float: left
 		top: 0
 		z-index: 2
+		.mobile-delivery
+			display: none
 		a
 			margin-left: 30px
 		a.catalog
@@ -264,7 +271,7 @@ body
 .prev-head-slider
 	cursor pointer
 	img
-		top 60%
+		top 55%
 		z-index 2
 		width 12.12px
 		height 22.64px
@@ -275,7 +282,7 @@ body
 .next-head-slider
 	cursor pointer
 	img
-		top 60%
+		top 55%
 		z-index 2
 		right 0
 		width 12.12px
@@ -286,7 +293,7 @@ body
 
 .slick-dots
 	display flex
-	margin-top -35px
+	margin-top -55px
 	justify-content center
 
 .pager
@@ -332,7 +339,7 @@ ul,li
 			float right
 			margin-top -45px
 			margin-right 20px
-			margin-right 9%
+			margin-right 5%
 			a
 				color #000
 				font-size 13px
@@ -340,7 +347,189 @@ ul,li
 				font-family 'PT-Sans-Regular'
 				padding: 8px 20px
 				border-radius: 9px
+				&:hover
+					color #fff
+					background: #ef4136
 		#viewedProducts
+			width 100%
+			display flex
+			flex-wrap wrap
+			&:focus
+				outline: none
+			.slick-list
+				max-height: 415px
+				.good
+					outline: none
+					display block
+					width 181.27px
+					height auto
+					min-height 208px
+					background: #fff
+					transition: 0.25s
+					border 1px solid #DEDEDE
+					&:hover
+						transition: 0.25s
+						-webkit-transform: scale(1.001)
+						-ms-transform: scale(1.001)
+						transform: scale(1.001)
+						box-shadow: 0 6px 30px rgba(0,0,0,0.15)
+					&:focus
+						outline: none
+					a
+						.good-img
+							width 62px
+							height auto
+							margin 0 auto
+							img
+								width 100%
+						.good-text
+							width 160px
+							height auto
+							min-height 61px
+							color #000
+							margin 0 auto
+							font-size 15px
+							text-align: center
+							font-family 'PT-Sans-Regular'
+							p
+								margin 0
+								margin-top 10px
+								margin-bottom: 10px
+								word-wrap break-word
+						.good-price-and-unit
+							display flex
+							margin-top: 27px
+							justify-content space-between
+							.good-price
+								min-width 36px
+								white-space nowrap
+								height 19px
+								margin 2px 17px
+								p
+									margin 0
+									color #000
+									font-size 17px
+									font-family 'OpenSans-Bold'
+							.good-unit
+								white-space nowrap
+								height 23px
+								margin-top 2px
+								margin 2px 17px
+								.plus
+									width 27px
+									height 26px
+									border-radius 8px
+									&:hover
+										background #EF4136
+										&:after,&:before
+											background: #fff
+									&:after
+										content ""
+										pointer-events:none
+										position absolute
+										background #707070
+										height 2px
+										width 14px
+										margin-top 12px
+										transition: all 0.5s ease
+										transform rotate(0deg)
+										margin-left 6.4px
+									&:before
+										content ""
+										pointer-events:none
+										position absolute
+										background #707070
+										height 2px
+										width 14px
+										margin-top 12px
+										transition: all 0.5s ease
+										transform rotate(90deg)
+										margin-left 6.4px
+								.minus
+									width 27px
+									height 26px
+									border-radius 8px
+									background-color #EF4136
+									&:after
+										background #fff
+										transition: all 0.5s ease
+										transform rotate(90deg)
+									&:before
+										content ""
+										pointer-events:none
+										position absolute
+										background #fff
+										height 2px
+										width 14px
+										transition: all 0.5s ease
+										transform rotate(0deg)
+										margin-top 12px
+										margin-left 6.4px
+								.minus
+									width 27px
+									height 26px
+									border-radius 8px
+									background-color #EF4136
+									&:after
+										background #fff
+										transition: all 0.5s ease
+										transform rotate(90deg)
+									&:before
+										content ""
+										pointer-events:none
+										position absolute
+										background #fff
+										height 2px
+										width 14px
+										transition: all 0.5s ease
+										transform rotate(0deg)
+										margin-top 12px
+										margin-left 6.4px
+		.reviews-gradient
+			width: 145px
+			height: 250px
+			position: relative
+			float: right
+			right: -2px
+			margin-top: -250px
+			background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1%, rgba(246, 246, 245, 0.1) 1%, #fff 90%)
+.container-popular
+	// max-width 1280px
+	padding-bottom 0 !important
+	padding-left 60px
+	.sale
+		margin: 65px auto
+		display: block
+		h1
+			color #000
+			font-size 20px
+			font-family 'Roboto-Bold'
+			text-transform uppercase
+			margin-bottom 25px
+			letter-spacing 2px
+			span
+				color $grey
+				margin-left 15px
+				font-size 16px
+				font-family 'Roboto-Regular'
+				font-weight 100
+				letter-spacing 0
+		.all-list
+			float right
+			margin-top -45px
+			margin-right 20px
+			margin-right 5%
+			a
+				color #000
+				font-size 13px
+				background: #EFEFED
+				font-family 'PT-Sans-Regular'
+				padding: 8px 20px
+				border-radius: 9px
+				&:hover
+					color #fff
+					background: #ef4136
+		#popularProducts
 			width 100%
 			display flex
 			flex-wrap wrap
@@ -351,23 +540,24 @@ ul,li
 				display block
 				width 181.27px
 				height auto
-				min-height 208px
+				min-height 275px
 				background: #fff
 				transition: 0.25s
 				border 1px solid #DEDEDE
 				&:hover
 					transition: 0.25s
-					-webkit-transform: scale(1.01)
-					-ms-transform: scale(1.01)
-					transform: scale(1.01)
+					-webkit-transform: scale(1.001)
+					-ms-transform: scale(1.001)
+					transform: scale(1.001)
 					box-shadow: 0 6px 30px rgba(0,0,0,0.15)
 				&:focus
 					outline: none
 				a
 					.good-img
-						width 62px
+						width 112px
 						height auto
 						margin 0 auto
+						margin-top: 20px
 						img
 							width 100%
 					.good-text
@@ -381,7 +571,7 @@ ul,li
 						font-family 'PT-Sans-Regular'
 						p
 							margin 0
-							margin-top 10px
+							margin-top 20px
 							margin-bottom: 10px
 							word-wrap break-word
 					.good-price-and-unit
@@ -399,28 +589,232 @@ ul,li
 								font-size 17px
 								font-family 'OpenSans-Bold'
 						.good-unit
-							min-width 52px
 							white-space nowrap
 							height 23px
 							margin-top 2px
 							margin 2px 17px
-							p
-								margin 0
-								color #000
-								text-align right
-								font-size 15px
-								font-family 'PT-Sans-Regular'
+							.plus
+								width 27px
+								height 26px
+								border-radius 8px
+								&:hover
+									background #EF4136
+									&:after,&:before
+										background: #fff
+								&:after
+									content ""
+									pointer-events:none
+									position absolute
+									background #707070
+									height 2px
+									width 14px
+									margin-top 12px
+									transition: all 0.5s ease
+									transform rotate(0deg)
+									margin-left 6.4px
+								&:before
+									content ""
+									pointer-events:none
+									position absolute
+									background #707070
+									height 2px
+									width 14px
+									margin-top 12px
+									transition: all 0.5s ease
+									transform rotate(90deg)
+									margin-left 6.4px
+							.minus
+								width 27px
+								height 26px
+								border-radius 8px
+								background-color #EF4136
+								&:after
+									background #fff
+									transition: all 0.5s ease
+									transform rotate(90deg)
+								&:before
+									content ""
+									pointer-events:none
+									position absolute
+									background #fff
+									height 2px
+									width 14px
+									transition: all 0.5s ease
+									transform rotate(0deg)
+									margin-top 12px
+									margin-left 6.4px
 		.reviews-gradient
-			width: 343px
-			height: 565px
+			width: 145px
+			height: 300px
 			position: relative
 			float: right
 			right: -2px
-			margin-top: -500px
-			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(246, 246, 245, 0.04) 25%, #fff 100%)
+			margin-top: -300px
+			background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1%, rgba(246, 246, 245, 0.1) 1%, #fff 90%)
+
+.container-water, .container-fruits, .container-milk
+	// max-width 1280px
+	padding-bottom 0 !important
+	padding-left 60px
+	.sale
+		margin: 65px auto
+		display: block
+		h1
+			color #000
+			font-size 20px
+			font-family 'Roboto-Bold'
+			text-transform uppercase
+			margin-bottom 25px
+			letter-spacing 2px
+			span
+				color $grey
+				margin-left 15px
+				font-size 16px
+				font-family 'Roboto-Regular'
+				font-weight 100
+				letter-spacing 0
+		.all-list
+			float right
+			margin-top -45px
+			margin-right 20px
+			margin-right 5%
+			a
+				color #000
+				font-size 13px
+				background: #EFEFED
+				font-family 'PT-Sans-Regular'
+				padding: 8px 20px
+				border-radius: 9px
+				&:hover
+					color #fff
+					background: #ef4136
+		#water, #fruits, #milk
+			width 100%
+			display flex
+			flex-wrap wrap
+			&:focus
+				outline: none
+			.slick-list
+				max-height: 415px
+				.good
+					outline: none
+					display block
+					width 230px
+					height auto
+					min-height 275px
+					background: #fff
+					transition: 0.25s
+					border 1px solid #DEDEDE
+					&:hover
+						transition: 0.25s
+						-webkit-transform: scale(1.001)
+						-ms-transform: scale(1.001)
+						transform: scale(1.001)
+						box-shadow: 0 6px 30px rgba(0,0,0,0.15)
+					&:focus
+						outline: none
+					a
+						.good-img
+							width 112px
+							height auto
+							margin 0 auto
+							img
+								width 100%
+						.good-text
+							width 160px
+							height auto
+							min-height 61px
+							color #000
+							margin 0 auto
+							font-size 15px
+							text-align: center
+							font-family 'PT-Sans-Regular'
+							p
+								margin 0
+								margin-top 20px
+								margin-bottom: 20px
+								word-wrap break-word
+						.good-price-and-unit
+							display flex
+							margin-top: 27px
+							justify-content space-between
+							.good-price
+								min-width 36px
+								white-space nowrap
+								height 19px
+								margin 2px 17px
+								p
+									margin 0
+									color #000
+									font-size 17px
+									font-family 'OpenSans-Bold'
+							.good-unit
+								white-space nowrap
+								height 23px
+								margin-top 2px
+								margin 2px 17px
+								.plus
+									width 27px
+									height 26px
+									border-radius 8px
+									&:hover
+										background #EF4136
+										&:after,&:before
+											background: #fff
+									&:after
+										content ""
+										pointer-events:none
+										position absolute
+										background #707070
+										height 2px
+										width 14px
+										margin-top 12px
+										transition: all 0.5s ease
+										transform rotate(0deg)
+										margin-left 6.4px
+									&:before
+										content ""
+										pointer-events:none
+										position absolute
+										background #707070
+										height 2px
+										width 14px
+										margin-top 12px
+										transition: all 0.5s ease
+										transform rotate(90deg)
+										margin-left 6.4px
+								.minus
+									width 27px
+									height 26px
+									border-radius 8px
+									background-color #EF4136
+									&:after
+										background #fff
+										transition: all 0.5s ease
+										transform rotate(90deg)
+									&:before
+										content ""
+										pointer-events:none
+										position absolute
+										background #fff
+										height 2px
+										width 14px
+										transition: all 0.5s ease
+										transform rotate(0deg)
+										margin-top 12px
+										margin-left 6.4px
+		.reviews-gradient
+			width: 145px
+			height: 300px
+			position: relative
+			float: right
+			right: -2px
+			margin-top: -300px
+			background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1%, rgba(246, 246, 245, 0.1) 1%, #fff 90%)
 footer
 	width: 100%
 	height: auto
+	margin-top: -20px
 	background: #3A1955
 	.container
 		height: 250px
@@ -506,3 +900,4 @@ footer
 			a
 				margin-left: 10px
 @import '/fonts.styl'
+@import '/mobile.styl'

@@ -1,0 +1,239 @@
+@media screen and (max-device-width: 768px)
+	.reviews-gradient
+		display: none
+	.container-foods, .container-popular, .container-water, .container-fruits, .container-milk
+		padding-left: 35px
+		.sale
+			h1
+				white-space: normal
+				width: 60%
+			#viewedProducts, #popularProducts, #water, #milk, #fruits
+				.slick-list
+					.good
+						&:hover
+							-webkit-transform: none
+							-ms-transform: none
+							transform: none
+	body
+		header
+			height: max-content
+			#header
+				height: auto
+				.navBurger
+					z-index: 10
+					display block !important
+					position: fixed
+					right: 20px
+					top: 20px
+					cursor: pointer
+					background: #111
+					box-sizing: border-box
+					background-clip: content-box
+					width: 30px
+					height: 24px
+					border-top: 11px solid transparent
+					border-bottom: 11px solid transparent
+					-webkit-transform: rotate(0deg)
+					transform: rotate(0deg)
+					transition: all 0.25s ease-in-out
+					&:before, &:after
+						content: ""
+						position: absolute
+						background: #111
+						height: 2px
+						width: 100%
+						right: 0
+						will-change: rotate
+						-webkit-transform: rotate(0deg)
+						transform: rotate(0deg)
+						transition: all 0.5s ease
+					&:before
+						top: -10px
+					&:after
+						bottom: -10px
+						width: 90%
+					&.active
+						background: transparent
+						background-clip: content-box
+						z-index 1000
+						&:before
+							-webkit-transform: rotate(135deg)
+							transform: rotate(135deg)
+							top: 0
+							background: #eee
+							width: 110%
+						&:after
+							bottom: 0
+							-webkit-transform: rotate(-135deg)
+							transform: rotate(-135deg)
+							background: #eee
+							width: 110%
+				.overlay
+					display block !important
+					position: fixed
+					background: #3a1955
+					top: 0
+					right: 0
+					width: 100%
+					height: 100%
+					opacity: 0
+					-webkit-transform-origin: right top
+					transform-origin: right top
+					-webkit-transform: scale(0)
+					transform: scale(0)
+					visibility: hidden
+					transition: all 0.4s ease-in-out
+					overflow: hidden
+					z-index 100
+					&.open
+						opacity: 0.99
+						visibility: visible
+						-webkit-transform: scale(1)
+						transform: scale(1)
+					.overlayMenu
+						position: relative
+						text-align: right
+						top 10%
+						right: 10vw
+						bottom: 10vw
+						ul
+							list-style: none
+							padding: 0
+							margin: 20px auto
+							display: block
+							position: relative
+							height: 100%
+							li
+								display: block
+								position: relative
+								width: 100%
+								a.catalog
+									font-family: 'Roboto-Regular'
+									display: flex
+									align-items: center
+									flex-flow: row-reverse
+									color: #fff
+									text-decoration: none
+									font-size: 20px
+									padding: 10px 20px 10px 20px
+									margin: 5px 0
+									transition: 0.2s
+									svg
+										margin-right: 10px
+										margin-bottom: -3px
+									&:hover, &:active, &:focus
+										-webkit-transform: translateX(-2px)
+										transform: translateX(-2px)
+										padding-left: 80px
+										color #f7941d
+										background: rgba(255, 255, 255, 0.03)
+										path
+											fill #f7941d
+										rect
+											fill #f7941d
+								a.link
+									font-family: 'Roboto-Regular'
+									display: inline-block
+									color: #fff
+									text-decoration: none
+									font-size: 20px
+									padding: 10px 20px 10px 20px
+									margin: 5px 0
+									transition: 0.2s
+									svg
+										margin-left: 5px
+										margin-bottom: -3px
+									&:hover, &:active, &:focus
+										-webkit-transform: translateX(-2px)
+										transform: translateX(-2px)
+										padding-left: 80px
+										color #f7941d
+										background: rgba(255, 255, 255, 0.03)
+										path
+											fill #f7941d
+				.container
+					width: 90%
+					display: block
+					margin: 0 auto
+					text-align: center
+					.logo
+						display: block
+						margin: 20px auto
+					.search
+						width: 100%
+						form
+							width: 97%
+							input[type="text"]
+								width: 100%
+					.down-login
+						display: none
+					.phone
+						display: none
+			.container
+				width: 100%
+				display: flex
+				margin: 0 auto
+				text-align: center
+				a.basket
+					right: 0
+					margin: 0
+					font-size: 12px
+					padding-right: 45px
+					img
+						width: 20%
+				.left-group-links
+					width: 100%
+					a.catalog
+						display: none
+					a
+						display: none
+					.vertical-line
+						display: none
+					p
+						display: none
+					.mobile-delivery
+						display: flex
+						margin: 0 auto
+						font-size: 12px
+						a.delivery
+							display: block
+							margin: 0
+							color: #f7941d
+							text-decoration: underline
+							&:hover
+								color #fff
+						span
+							margin-right: 10px
+							margin-left: 10px
+							color: #fff
+
+	#slider
+		display: none
+	footer
+		.container
+			height: max-content
+			max-width: 85%
+			display: flex
+			.footer-up
+				width: 100%
+				display: flex
+				flex-direction: column
+				.footer-left
+					.logo
+						margin: 0 auto
+					.links-block
+						width: 100%
+						justify-content: center
+				.footer-right
+					padding-top: 15px
+					margin: 0 auto
+					margin-bottom: 25px
+					.mail
+						float: none
+					.cards
+						margin-top: 25px
+		.footer-down
+			height: 100px
+			background-image: url("../img/footer-mobile.jpg")
+			.container
+				justify-content: center

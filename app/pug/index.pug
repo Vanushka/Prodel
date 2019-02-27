@@ -14,8 +14,27 @@ html
 			.sale 
 				h1 SALE
 				.all-list
-					a(href="catalog.html") See all products
+					a See all products
 				#viewedProducts 
+					each val in viewedfoods 
+						.good  
+							a(href="javascript:openProductDetail()")
+								.good-text 
+									p= val.text
+								.good-img      
+									img(src=val.img)
+								.good-price-and-unit
+									.good-price
+										p= val.price
+									.good-unit
+										.plus 
+				.reviews-gradient
+		.container-popular 
+			.sale 
+				h1 POPULAR PRODUCTS
+				.all-list
+					a See all products
+				#popularProducts 
 					each val in viewedfoods 
 						.good  
 							a(href="javascript:openProductDetail()")
@@ -26,8 +45,65 @@ html
 								.good-price-and-unit
 									.good-price
 										p= val.price
-									//- .good-unit
-									//- 	p= val.unit 
+									.good-unit
+										.plus 
+				.reviews-gradient
+		.container-water 
+			.sale 
+				h1 WATER
+				.all-list
+					a See all products
+				#water  
+					each val in viewedfoods 
+						.good  
+							a(href="javascript:openProductDetail()")
+								.good-text 
+									p= val.text
+								.good-img 
+									img(src=val.img)
+								.good-price-and-unit
+									.good-price
+										p= val.price
+									.good-unit
+										.plus  
+				.reviews-gradient
+		.container-fruits 
+			.sale 
+				h1 FRUITS
+				.all-list
+					a See all products
+				#fruits
+					each val in viewedfoods 
+						.good  
+							a(href="javascript:openProductDetail()")
+								.good-text 
+									p= val.text
+								.good-img 
+									img(src=val.img)
+								.good-price-and-unit
+									.good-price  
+										p= val.price
+									.good-unit
+										.plus  
+				.reviews-gradient
+		.container-milk 
+			.sale 
+				h1 MILK 
+				.all-list
+					a See all products
+				#milk
+					each val in viewedfoods 
+						.good  
+							a(href="javascript:openProductDetail()")
+								.good-text 
+									p= val.text
+								.good-img 
+									img(src=val.img)
+								.good-price-and-unit
+									.good-price
+										p= val.price
+									.good-unit
+										.plus
 				.reviews-gradient
 		include include/footer.pug 
  

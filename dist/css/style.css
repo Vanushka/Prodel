@@ -7,6 +7,10 @@ body .slick-slide:focus,
 body .slick-slide a {
   outline: none;
 }
+body .slick-list {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
 body a {
   cursor: pointer;
   text-decoration: none;
@@ -22,6 +26,10 @@ body header #header {
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
+}
+body header #header .navBurger,
+body header #header .overlay {
+  display: none;
 }
 body header #header .container {
   padding-top: 10px;
@@ -110,11 +118,11 @@ body header #header .container .down-login {
 }
 body header #header .container .down-login .download a {
   font-size: 15px;
-  color: #f7941d;
+  color: #fff;
   font-family: 'OpenSans-Light';
 }
 body header #header .container .down-login .download a:hover {
-  color: #fff;
+  color: #f7941d;
 }
 body header #header .container .down-login .login {
   display: -ms-flexbox;
@@ -251,6 +259,9 @@ body header .zigzag:after {
   top: 0;
   z-index: 2;
 }
+.container .left-group-links .mobile-delivery {
+  display: none;
+}
 .container .left-group-links a {
   margin-left: 30px;
 }
@@ -339,7 +350,7 @@ body header .zigzag:after {
   cursor: pointer;
 }
 .prev-head-slider img {
-  top: 60%;
+  top: 55%;
   z-index: 2;
   width: 12.12px;
   height: 22.64px;
@@ -351,7 +362,7 @@ body header .zigzag:after {
   cursor: pointer;
 }
 .next-head-slider img {
-  top: 60%;
+  top: 55%;
   z-index: 2;
   right: 0;
   width: 12.12px;
@@ -363,7 +374,7 @@ body header .zigzag:after {
 .slick-dots {
   display: -ms-flexbox;
   display: flex;
-  margin-top: -35px;
+  margin-top: -55px;
   -ms-flex-pack: center;
       justify-content: center;
 }
@@ -413,7 +424,7 @@ li {
   float: right;
   margin-top: -45px;
   margin-right: 20px;
-  margin-right: 9%;
+  margin-right: 5%;
 }
 .container-foods .sale .all-list a {
   color: #000;
@@ -422,6 +433,10 @@ li {
   font-family: 'PT-Sans-Regular';
   padding: 8px 20px;
   border-radius: 9px;
+}
+.container-foods .sale .all-list a:hover {
+  color: #fff;
+  background: #ef4136;
 }
 .container-foods .sale #viewedProducts {
   width: 100%;
@@ -433,7 +448,10 @@ li {
 .container-foods .sale #viewedProducts:focus {
   outline: none;
 }
-.container-foods .sale #viewedProducts .good {
+.container-foods .sale #viewedProducts .slick-list {
+  max-height: 415px;
+}
+.container-foods .sale #viewedProducts .slick-list .good {
   outline: none;
   display: block;
   width: 181.27px;
@@ -443,24 +461,24 @@ li {
   transition: 0.25s;
   border: 1px solid #dedede;
 }
-.container-foods .sale #viewedProducts .good:hover {
+.container-foods .sale #viewedProducts .slick-list .good:hover {
   transition: 0.25s;
-  -ms-transform: scale(1.01);
-  transform: scale(1.01);
+  -ms-transform: scale(1.001);
+  transform: scale(1.001);
   box-shadow: 0 6px 30px rgba(0,0,0,0.15);
 }
-.container-foods .sale #viewedProducts .good:focus {
+.container-foods .sale #viewedProducts .slick-list .good:focus {
   outline: none;
 }
-.container-foods .sale #viewedProducts .good a .good-img {
+.container-foods .sale #viewedProducts .slick-list .good a .good-img {
   width: 62px;
   height: auto;
   margin: 0 auto;
 }
-.container-foods .sale #viewedProducts .good a .good-img img {
+.container-foods .sale #viewedProducts .slick-list .good a .good-img img {
   width: 100%;
 }
-.container-foods .sale #viewedProducts .good a .good-text {
+.container-foods .sale #viewedProducts .slick-list .good a .good-text {
   width: 160px;
   height: auto;
   min-height: 61px;
@@ -470,57 +488,726 @@ li {
   text-align: center;
   font-family: 'PT-Sans-Regular';
 }
-.container-foods .sale #viewedProducts .good a .good-text p {
+.container-foods .sale #viewedProducts .slick-list .good a .good-text p {
   margin: 0;
   margin-top: 10px;
   margin-bottom: 10px;
   word-wrap: break-word;
 }
-.container-foods .sale #viewedProducts .good a .good-price-and-unit {
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit {
   display: -ms-flexbox;
   display: flex;
   margin-top: 27px;
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
-.container-foods .sale #viewedProducts .good a .good-price-and-unit .good-price {
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-price {
   min-width: 36px;
   white-space: nowrap;
   height: 19px;
   margin: 2px 17px;
 }
-.container-foods .sale #viewedProducts .good a .good-price-and-unit .good-price p {
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-price p {
   margin: 0;
   color: #000;
   font-size: 17px;
   font-family: 'OpenSans-Bold';
 }
-.container-foods .sale #viewedProducts .good a .good-price-and-unit .good-unit {
-  min-width: 52px;
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit {
   white-space: nowrap;
   height: 23px;
   margin-top: 2px;
   margin: 2px 17px;
 }
-.container-foods .sale #viewedProducts .good a .good-price-and-unit .good-unit p {
-  margin: 0;
-  color: #000;
-  text-align: right;
-  font-size: 15px;
-  font-family: 'PT-Sans-Regular';
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .plus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .plus:hover {
+  background: #ef4136;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before {
+  background: #fff;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .plus:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-left: 6.4px;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .plus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  margin-left: 6.4px;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+  background-color: #ef4136;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus:after {
+  background: #fff;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 14px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-top: 12px;
+  margin-left: 6.4px;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+  background-color: #ef4136;
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus:after {
+  background: #fff;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+.container-foods .sale #viewedProducts .slick-list .good a .good-price-and-unit .good-unit .minus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 14px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-top: 12px;
+  margin-left: 6.4px;
 }
 .container-foods .sale .reviews-gradient {
-  width: 343px;
-  height: 565px;
+  width: 145px;
+  height: 250px;
   position: relative;
   float: right;
   right: -2px;
-  margin-top: -500px;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(246,246,245,0.04) 25%, #fff 100%);
+  margin-top: -250px;
+  background: linear-gradient(to right, rgba(255,255,255,0.04) 1%, rgba(246,246,245,0.1) 1%, #fff 90%);
+}
+.container-popular {
+  padding-bottom: 0 !important;
+  padding-left: 60px;
+}
+.container-popular .sale {
+  margin: 65px auto;
+  display: block;
+}
+.container-popular .sale h1 {
+  color: #000;
+  font-size: 20px;
+  font-family: 'Roboto-Bold';
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+.container-popular .sale h1 span {
+  color: $grey;
+  margin-left: 15px;
+  font-size: 16px;
+  font-family: 'Roboto-Regular';
+  font-weight: 100;
+  letter-spacing: 0;
+}
+.container-popular .sale .all-list {
+  float: right;
+  margin-top: -45px;
+  margin-right: 20px;
+  margin-right: 5%;
+}
+.container-popular .sale .all-list a {
+  color: #000;
+  font-size: 13px;
+  background: #efefed;
+  font-family: 'PT-Sans-Regular';
+  padding: 8px 20px;
+  border-radius: 9px;
+}
+.container-popular .sale .all-list a:hover {
+  color: #fff;
+  background: #ef4136;
+}
+.container-popular .sale #popularProducts {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.container-popular .sale #popularProducts:focus {
+  outline: none;
+}
+.container-popular .sale #popularProducts .good {
+  outline: none;
+  display: block;
+  width: 181.27px;
+  height: auto;
+  min-height: 275px;
+  background: #fff;
+  transition: 0.25s;
+  border: 1px solid #dedede;
+}
+.container-popular .sale #popularProducts .good:hover {
+  transition: 0.25s;
+  -ms-transform: scale(1.001);
+  transform: scale(1.001);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+.container-popular .sale #popularProducts .good:focus {
+  outline: none;
+}
+.container-popular .sale #popularProducts .good a .good-img {
+  width: 112px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.container-popular .sale #popularProducts .good a .good-img img {
+  width: 100%;
+}
+.container-popular .sale #popularProducts .good a .good-text {
+  width: 160px;
+  height: auto;
+  min-height: 61px;
+  color: #000;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'PT-Sans-Regular';
+}
+.container-popular .sale #popularProducts .good a .good-text p {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 27px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-price {
+  min-width: 36px;
+  white-space: nowrap;
+  height: 19px;
+  margin: 2px 17px;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-price p {
+  margin: 0;
+  color: #000;
+  font-size: 17px;
+  font-family: 'OpenSans-Bold';
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit {
+  white-space: nowrap;
+  height: 23px;
+  margin-top: 2px;
+  margin: 2px 17px;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .plus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .plus:hover {
+  background: #ef4136;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .plus:hover:before {
+  background: #fff;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .plus:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-left: 6.4px;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .plus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  margin-left: 6.4px;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .minus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+  background-color: #ef4136;
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .minus:after {
+  background: #fff;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+.container-popular .sale #popularProducts .good a .good-price-and-unit .good-unit .minus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 14px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-top: 12px;
+  margin-left: 6.4px;
+}
+.container-popular .sale .reviews-gradient {
+  width: 145px;
+  height: 300px;
+  position: relative;
+  float: right;
+  right: -2px;
+  margin-top: -300px;
+  background: linear-gradient(to right, rgba(255,255,255,0.04) 1%, rgba(246,246,245,0.1) 1%, #fff 90%);
+}
+.container-water,
+.container-fruits,
+.container-milk {
+  padding-bottom: 0 !important;
+  padding-left: 60px;
+}
+.container-water .sale,
+.container-fruits .sale,
+.container-milk .sale {
+  margin: 65px auto;
+  display: block;
+}
+.container-water .sale h1,
+.container-fruits .sale h1,
+.container-milk .sale h1 {
+  color: #000;
+  font-size: 20px;
+  font-family: 'Roboto-Bold';
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+.container-water .sale h1 span,
+.container-fruits .sale h1 span,
+.container-milk .sale h1 span {
+  color: $grey;
+  margin-left: 15px;
+  font-size: 16px;
+  font-family: 'Roboto-Regular';
+  font-weight: 100;
+  letter-spacing: 0;
+}
+.container-water .sale .all-list,
+.container-fruits .sale .all-list,
+.container-milk .sale .all-list {
+  float: right;
+  margin-top: -45px;
+  margin-right: 20px;
+  margin-right: 5%;
+}
+.container-water .sale .all-list a,
+.container-fruits .sale .all-list a,
+.container-milk .sale .all-list a {
+  color: #000;
+  font-size: 13px;
+  background: #efefed;
+  font-family: 'PT-Sans-Regular';
+  padding: 8px 20px;
+  border-radius: 9px;
+}
+.container-water .sale .all-list a:hover,
+.container-fruits .sale .all-list a:hover,
+.container-milk .sale .all-list a:hover {
+  color: #fff;
+  background: #ef4136;
+}
+.container-water .sale #water,
+.container-fruits .sale #water,
+.container-milk .sale #water,
+.container-water .sale #fruits,
+.container-fruits .sale #fruits,
+.container-milk .sale #fruits,
+.container-water .sale #milk,
+.container-fruits .sale #milk,
+.container-milk .sale #milk {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.container-water .sale #water:focus,
+.container-fruits .sale #water:focus,
+.container-milk .sale #water:focus,
+.container-water .sale #fruits:focus,
+.container-fruits .sale #fruits:focus,
+.container-milk .sale #fruits:focus,
+.container-water .sale #milk:focus,
+.container-fruits .sale #milk:focus,
+.container-milk .sale #milk:focus {
+  outline: none;
+}
+.container-water .sale #water .slick-list,
+.container-fruits .sale #water .slick-list,
+.container-milk .sale #water .slick-list,
+.container-water .sale #fruits .slick-list,
+.container-fruits .sale #fruits .slick-list,
+.container-milk .sale #fruits .slick-list,
+.container-water .sale #milk .slick-list,
+.container-fruits .sale #milk .slick-list,
+.container-milk .sale #milk .slick-list {
+  max-height: 415px;
+}
+.container-water .sale #water .slick-list .good,
+.container-fruits .sale #water .slick-list .good,
+.container-milk .sale #water .slick-list .good,
+.container-water .sale #fruits .slick-list .good,
+.container-fruits .sale #fruits .slick-list .good,
+.container-milk .sale #fruits .slick-list .good,
+.container-water .sale #milk .slick-list .good,
+.container-fruits .sale #milk .slick-list .good,
+.container-milk .sale #milk .slick-list .good {
+  outline: none;
+  display: block;
+  width: 230px;
+  height: auto;
+  min-height: 275px;
+  background: #fff;
+  transition: 0.25s;
+  border: 1px solid #dedede;
+}
+.container-water .sale #water .slick-list .good:hover,
+.container-fruits .sale #water .slick-list .good:hover,
+.container-milk .sale #water .slick-list .good:hover,
+.container-water .sale #fruits .slick-list .good:hover,
+.container-fruits .sale #fruits .slick-list .good:hover,
+.container-milk .sale #fruits .slick-list .good:hover,
+.container-water .sale #milk .slick-list .good:hover,
+.container-fruits .sale #milk .slick-list .good:hover,
+.container-milk .sale #milk .slick-list .good:hover {
+  transition: 0.25s;
+  -ms-transform: scale(1.001);
+  transform: scale(1.001);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+.container-water .sale #water .slick-list .good:focus,
+.container-fruits .sale #water .slick-list .good:focus,
+.container-milk .sale #water .slick-list .good:focus,
+.container-water .sale #fruits .slick-list .good:focus,
+.container-fruits .sale #fruits .slick-list .good:focus,
+.container-milk .sale #fruits .slick-list .good:focus,
+.container-water .sale #milk .slick-list .good:focus,
+.container-fruits .sale #milk .slick-list .good:focus,
+.container-milk .sale #milk .slick-list .good:focus {
+  outline: none;
+}
+.container-water .sale #water .slick-list .good a .good-img,
+.container-fruits .sale #water .slick-list .good a .good-img,
+.container-milk .sale #water .slick-list .good a .good-img,
+.container-water .sale #fruits .slick-list .good a .good-img,
+.container-fruits .sale #fruits .slick-list .good a .good-img,
+.container-milk .sale #fruits .slick-list .good a .good-img,
+.container-water .sale #milk .slick-list .good a .good-img,
+.container-fruits .sale #milk .slick-list .good a .good-img,
+.container-milk .sale #milk .slick-list .good a .good-img {
+  width: 112px;
+  height: auto;
+  margin: 0 auto;
+}
+.container-water .sale #water .slick-list .good a .good-img img,
+.container-fruits .sale #water .slick-list .good a .good-img img,
+.container-milk .sale #water .slick-list .good a .good-img img,
+.container-water .sale #fruits .slick-list .good a .good-img img,
+.container-fruits .sale #fruits .slick-list .good a .good-img img,
+.container-milk .sale #fruits .slick-list .good a .good-img img,
+.container-water .sale #milk .slick-list .good a .good-img img,
+.container-fruits .sale #milk .slick-list .good a .good-img img,
+.container-milk .sale #milk .slick-list .good a .good-img img {
+  width: 100%;
+}
+.container-water .sale #water .slick-list .good a .good-text,
+.container-fruits .sale #water .slick-list .good a .good-text,
+.container-milk .sale #water .slick-list .good a .good-text,
+.container-water .sale #fruits .slick-list .good a .good-text,
+.container-fruits .sale #fruits .slick-list .good a .good-text,
+.container-milk .sale #fruits .slick-list .good a .good-text,
+.container-water .sale #milk .slick-list .good a .good-text,
+.container-fruits .sale #milk .slick-list .good a .good-text,
+.container-milk .sale #milk .slick-list .good a .good-text {
+  width: 160px;
+  height: auto;
+  min-height: 61px;
+  color: #000;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'PT-Sans-Regular';
+}
+.container-water .sale #water .slick-list .good a .good-text p,
+.container-fruits .sale #water .slick-list .good a .good-text p,
+.container-milk .sale #water .slick-list .good a .good-text p,
+.container-water .sale #fruits .slick-list .good a .good-text p,
+.container-fruits .sale #fruits .slick-list .good a .good-text p,
+.container-milk .sale #fruits .slick-list .good a .good-text p,
+.container-water .sale #milk .slick-list .good a .good-text p,
+.container-fruits .sale #milk .slick-list .good a .good-text p,
+.container-milk .sale #milk .slick-list .good a .good-text p {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 27px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-price,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-price,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-price,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-price,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-price,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-price,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-price,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-price,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-price {
+  min-width: 36px;
+  white-space: nowrap;
+  height: 19px;
+  margin: 2px 17px;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-price p,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-price p,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-price p,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-price p,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-price p,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-price p,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-price p,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-price p,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-price p {
+  margin: 0;
+  color: #000;
+  font-size: 17px;
+  font-family: 'OpenSans-Bold';
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit {
+  white-space: nowrap;
+  height: 23px;
+  margin-top: 2px;
+  margin: 2px 17px;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover {
+  background: #ef4136;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover:after,
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:hover:before {
+  background: #fff;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:after,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-left: 6.4px;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:before,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .plus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #707070;
+  height: 2px;
+  width: 14px;
+  margin-top: 12px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  margin-left: 6.4px;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus {
+  width: 27px;
+  height: 26px;
+  border-radius: 8px;
+  background-color: #ef4136;
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:after,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:after {
+  background: #fff;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+.container-water .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-fruits .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-milk .sale #water .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-water .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-fruits .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-milk .sale #fruits .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-water .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-fruits .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:before,
+.container-milk .sale #milk .slick-list .good a .good-price-and-unit .good-unit .minus:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  height: 2px;
+  width: 14px;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  margin-top: 12px;
+  margin-left: 6.4px;
+}
+.container-water .sale .reviews-gradient,
+.container-fruits .sale .reviews-gradient,
+.container-milk .sale .reviews-gradient {
+  width: 145px;
+  height: 300px;
+  position: relative;
+  float: right;
+  right: -2px;
+  margin-top: -300px;
+  background: linear-gradient(to right, rgba(255,255,255,0.04) 1%, rgba(246,246,245,0.1) 1%, #fff 90%);
 }
 footer {
   width: 100%;
   height: auto;
+  margin-top: -20px;
   background: #3a1955;
 }
 footer .container {
@@ -699,4 +1386,348 @@ footer .footer-down .container a {
   src: url("../fonts/Futura-Bold.ttf");
   font-weight: 700;
   font-style: normal;
+}
+@media screen and (max-device-width: 768px) {
+  .reviews-gradient {
+    display: none;
+  }
+  .container-foods,
+  .container-popular,
+  .container-water,
+  .container-fruits,
+  .container-milk {
+    padding-left: 35px;
+  }
+  .container-foods .sale h1,
+  .container-popular .sale h1,
+  .container-water .sale h1,
+  .container-fruits .sale h1,
+  .container-milk .sale h1 {
+    white-space: normal;
+    width: 60%;
+  }
+  .container-foods .sale #viewedProducts .slick-list .good:hover,
+  .container-popular .sale #viewedProducts .slick-list .good:hover,
+  .container-water .sale #viewedProducts .slick-list .good:hover,
+  .container-fruits .sale #viewedProducts .slick-list .good:hover,
+  .container-milk .sale #viewedProducts .slick-list .good:hover,
+  .container-foods .sale #popularProducts .slick-list .good:hover,
+  .container-popular .sale #popularProducts .slick-list .good:hover,
+  .container-water .sale #popularProducts .slick-list .good:hover,
+  .container-fruits .sale #popularProducts .slick-list .good:hover,
+  .container-milk .sale #popularProducts .slick-list .good:hover,
+  .container-foods .sale #water .slick-list .good:hover,
+  .container-popular .sale #water .slick-list .good:hover,
+  .container-water .sale #water .slick-list .good:hover,
+  .container-fruits .sale #water .slick-list .good:hover,
+  .container-milk .sale #water .slick-list .good:hover,
+  .container-foods .sale #milk .slick-list .good:hover,
+  .container-popular .sale #milk .slick-list .good:hover,
+  .container-water .sale #milk .slick-list .good:hover,
+  .container-fruits .sale #milk .slick-list .good:hover,
+  .container-milk .sale #milk .slick-list .good:hover,
+  .container-foods .sale #fruits .slick-list .good:hover,
+  .container-popular .sale #fruits .slick-list .good:hover,
+  .container-water .sale #fruits .slick-list .good:hover,
+  .container-fruits .sale #fruits .slick-list .good:hover,
+  .container-milk .sale #fruits .slick-list .good:hover {
+    -ms-transform: none;
+    transform: none;
+  }
+  body header {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body header #header {
+    height: auto;
+  }
+  body header #header .navBurger {
+    z-index: 10;
+    display: block !important;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    background: #111;
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 30px;
+    height: 24px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    transition: all 0.25s ease-in-out;
+  }
+  body header #header .navBurger:before,
+  body header #header .navBurger:after {
+    content: "";
+    position: absolute;
+    background: #111;
+    height: 2px;
+    width: 100%;
+    right: 0;
+    will-change: rotate;
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    transition: all 0.5s ease;
+  }
+  body header #header .navBurger:before {
+    top: -10px;
+  }
+  body header #header .navBurger:after {
+    bottom: -10px;
+    width: 90%;
+  }
+  body header #header .navBurger.active {
+    background: transparent;
+    background-clip: content-box;
+    z-index: 1000;
+  }
+  body header #header .navBurger.active:before {
+    -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+    top: 0;
+    background: #eee;
+    width: 110%;
+  }
+  body header #header .navBurger.active:after {
+    bottom: 0;
+    -ms-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    background: #eee;
+    width: 110%;
+  }
+  body header #header .overlay {
+    display: block !important;
+    position: fixed;
+    background: #3a1955;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -ms-transform-origin: right top;
+        transform-origin: right top;
+    -ms-transform: scale(0);
+        transform: scale(0);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: 100;
+  }
+  body header #header .overlay.open {
+    opacity: 0.99;
+    visibility: visible;
+    -ms-transform: scale(1);
+        transform: scale(1);
+  }
+  body header #header .overlay .overlayMenu {
+    position: relative;
+    text-align: right;
+    top: 10%;
+    right: 10vw;
+    bottom: 10vw;
+  }
+  body header #header .overlay .overlayMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+  body header #header .overlay .overlayMenu ul li {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  body header #header .overlay .overlayMenu ul li a.catalog {
+    font-family: 'Roboto-Regular';
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-flow: row-reverse;
+        flex-flow: row-reverse;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    margin: 5px 0;
+    transition: 0.2s;
+  }
+  body header #header .overlay .overlayMenu ul li a.catalog svg {
+    margin-right: 10px;
+    margin-bottom: -3px;
+  }
+  body header #header .overlay .overlayMenu ul li a.catalog:hover,
+  body header #header .overlay .overlayMenu ul li a.catalog:active,
+  body header #header .overlay .overlayMenu ul li a.catalog:focus {
+    -ms-transform: translateX(-2px);
+        transform: translateX(-2px);
+    padding-left: 80px;
+    color: #f7941d;
+    background: rgba(255,255,255,0.03);
+  }
+  body header #header .overlay .overlayMenu ul li a.catalog:hover path,
+  body header #header .overlay .overlayMenu ul li a.catalog:active path,
+  body header #header .overlay .overlayMenu ul li a.catalog:focus path {
+    fill: #f7941d;
+  }
+  body header #header .overlay .overlayMenu ul li a.catalog:hover rect,
+  body header #header .overlay .overlayMenu ul li a.catalog:active rect,
+  body header #header .overlay .overlayMenu ul li a.catalog:focus rect {
+    fill: #f7941d;
+  }
+  body header #header .overlay .overlayMenu ul li a.link {
+    font-family: 'Roboto-Regular';
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    margin: 5px 0;
+    transition: 0.2s;
+  }
+  body header #header .overlay .overlayMenu ul li a.link svg {
+    margin-left: 5px;
+    margin-bottom: -3px;
+  }
+  body header #header .overlay .overlayMenu ul li a.link:hover,
+  body header #header .overlay .overlayMenu ul li a.link:active,
+  body header #header .overlay .overlayMenu ul li a.link:focus {
+    -ms-transform: translateX(-2px);
+        transform: translateX(-2px);
+    padding-left: 80px;
+    color: #f7941d;
+    background: rgba(255,255,255,0.03);
+  }
+  body header #header .overlay .overlayMenu ul li a.link:hover path,
+  body header #header .overlay .overlayMenu ul li a.link:active path,
+  body header #header .overlay .overlayMenu ul li a.link:focus path {
+    fill: #f7941d;
+  }
+  body header #header .container {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  body header #header .container .logo {
+    display: block;
+    margin: 20px auto;
+  }
+  body header #header .container .search {
+    width: 100%;
+  }
+  body header #header .container .search form {
+    width: 97%;
+  }
+  body header #header .container .search form input[type="text"] {
+    width: 100%;
+  }
+  body header #header .container .down-login {
+    display: none;
+  }
+  body header #header .container .phone {
+    display: none;
+  }
+  body header .container {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+  }
+  body header .container a.basket {
+    right: 0;
+    margin: 0;
+    font-size: 12px;
+    padding-right: 45px;
+  }
+  body header .container a.basket img {
+    width: 20%;
+  }
+  body header .container .left-group-links {
+    width: 100%;
+  }
+  body header .container .left-group-links a.catalog {
+    display: none;
+  }
+  body header .container .left-group-links a {
+    display: none;
+  }
+  body header .container .left-group-links .vertical-line {
+    display: none;
+  }
+  body header .container .left-group-links p {
+    display: none;
+  }
+  body header .container .left-group-links .mobile-delivery {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+  body header .container .left-group-links .mobile-delivery a.delivery {
+    display: block;
+    margin: 0;
+    color: #f7941d;
+    text-decoration: underline;
+  }
+  body header .container .left-group-links .mobile-delivery a.delivery:hover {
+    color: #fff;
+  }
+  body header .container .left-group-links .mobile-delivery span {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+  }
+  #slider {
+    display: none;
+  }
+  footer .container {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    max-width: 85%;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .container .footer-up {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  footer .container .footer-up .footer-left .logo {
+    margin: 0 auto;
+  }
+  footer .container .footer-up .footer-left .links-block {
+    width: 100%;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  footer .container .footer-up .footer-right {
+    padding-top: 15px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  footer .container .footer-up .footer-right .mail {
+    float: none;
+  }
+  footer .container .footer-up .footer-right .cards {
+    margin-top: 25px;
+  }
+  footer .footer-down {
+    height: 100px;
+    background-image: url("../img/footer-mobile.jpg");
+  }
+  footer .footer-down .container {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
 }
