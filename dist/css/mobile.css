@@ -346,11 +346,13 @@
   }
 }
 @media screen and (max-device-width: 768px) {
-  .catalog-block-fon:after {
+  .catalog-block-fon-water:after,
+  .catalog-block-fon-vegetables:after {
     height: 460px;
     margin-top: 0;
   }
-  .catalog-block-fon .headline {
+  .catalog-block-fon-water .headline,
+  .catalog-block-fon-vegetables .headline {
     margin-top: 60px;
   }
   .container-catalog {
