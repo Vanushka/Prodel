@@ -1,4 +1,4 @@
-.catalog-block-fon {
+.catalog-block-fon-vegetables {
   width: 100%;
   background-size: cover;
   height: 460px;
@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-image: url("../img/vegetables-fon.png");
 }
-.catalog-block-fon:after {
+.catalog-block-fon-vegetables:after {
   content: "";
   width: 100%;
   height: 410px;
@@ -19,26 +19,26 @@
   margin-top: 50px;
   background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.25) 28%, rgba(246,246,245,0.5) 60%, #fff 100%);
 }
-.catalog-block-fon .headline {
+.catalog-block-fon-vegetables .headline {
   z-index: 10;
   margin-top: 145px;
 }
-.catalog-block-fon .headline .bread-crumbs-block {
+.catalog-block-fon-vegetables .headline .bread-crumbs-block {
   text-align: center;
 }
-.catalog-block-fon .headline .bread-crumbs-block a {
+.catalog-block-fon-vegetables .headline .bread-crumbs-block a {
   color: #707070;
   font-size: 13px;
   font-family: 'PT-Sans-Regular';
 }
-.catalog-block-fon .headline .bread-crumbs-block a:hover {
+.catalog-block-fon-vegetables .headline .bread-crumbs-block a:hover {
   text-decoration: underline;
 }
-.catalog-block-fon .headline .bread-crumbs-block span {
+.catalog-block-fon-vegetables .headline .bread-crumbs-block span {
   margin-left: 15px;
   margin-right: 15px;
 }
-.catalog-block-fon .headline h1 {
+.catalog-block-fon-vegetables .headline h1 {
   font-size: 26px;
   font-family: 'OpenSans-Bold';
 }
