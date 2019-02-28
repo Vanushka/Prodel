@@ -155,7 +155,7 @@ if ($(window).width() >= 768) {
 		$(".overlay").toggleClass("open");
 		$("body").toggleClass("locked");
 	});
-	$(".plus").click(function() {
+	$(".good-unit .plus").click(function() {
 		$(this).toggleClass("minus");
 		$(this).toggleClass("plus");
 	});

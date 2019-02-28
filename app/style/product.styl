@@ -1,0 +1,183 @@
+.container-product
+	margin: 150px auto
+	max-width 1280px
+	.head-product-block
+		height: 500px
+		min-width: 1142px
+		.line-links
+			display: flex
+			justify-content: space-between
+			a.next, a.prev
+				color #000
+				font-size 13px
+				background: #EFEFED
+				font-family 'PT-Sans-Regular'
+				padding: 8px 20px
+				border-radius: 9px
+				transition: all 0.3s ease
+				&:hover
+					color #fff
+					transition: all 0.3s ease
+					background: #ef4136
+			.bread-crumbs-block
+				text-align: center
+				a
+					color: #707070
+					font-size: 13px
+					font-family: 'PT-Sans-Regular'
+					&:hover
+						text-decoration: underline
+				span
+					margin-left: 15px
+					margin-right: 15px
+		.product-block
+			display: block
+			margin: 0 auto
+			text-align: center
+			h1
+				font-size: 26px
+				font-family: 'OpenSans-Bold'
+			.img-product
+				width: 383px
+				height: 385px
+				margin: 0 auto
+				img
+					width: 100%
+			.block-price-and-count
+				display: flex
+				align-items: center
+				justify-content: center
+				p.price
+					font-size: 26px
+					margin-right: 35px
+					font-family: 'OpenSans-Bold'
+				.product-count
+					align-items: center
+					display: flex
+					a.minus
+						width 27px
+						height 26px
+						border-radius 8px
+						&:before
+							content ""
+							pointer-events:none
+							position absolute
+							background #000
+							height 2px
+							width 14px
+							transition: all 0.5s ease !important
+							transform rotate(180deg)
+							margin-top 12px
+							margin-left -6.4px
+						&:hover
+							background #EF4136
+							&:before
+								background: #fff
+					p
+						width: 40px
+						height: 30px
+						padding-top: 8px
+						margin 3px 10px
+						font-size 15px
+						font-weight 400
+						color #4a4a4a
+						border-radius: 10px
+						background-color #c4c4c4
+						font-family 'OpenSans'
+					a.plus
+						width 27px
+						height 26px
+						border-radius 8px
+						&:hover
+							background #EF4136
+							&:after,&:before
+								background: #fff
+						&:after
+							content ""
+							pointer-events:none
+							position absolute
+							background #000
+							height 2px
+							width 14px
+							margin-top 12px
+							transition: all 0.5s ease
+							transform rotate(0deg)
+							margin-left -6.4px
+						&:before
+							content ""
+							pointer-events:none
+							position absolute
+							background #000
+							height 2px
+							width 14px
+							margin-top 12px
+							transition: all 0.5s ease
+							transform rotate(90deg)
+							margin-left -6.4px
+				a.add
+					width: 70px
+					height: 30px
+					margin-left: 35px
+					padding-top: 8px
+					font-size 15px
+					font-weight 400
+					color #fff
+					border-radius: 10px
+					background-color #EF4136
+					font-family 'OpenSans'
+					&:hover
+						background: #e31508
+.container-about-product
+	height: auto
+	background: #f3f3f3
+	max-width 100%
+	.inside-container-about
+		display: flex
+		margin: 0 auto
+		padding-top: 40px
+		padding-bottom: 150px
+		justify-content: center
+		max-width 1280px
+		.product-description
+			width: 415px
+			margin-right: 65px
+			height: max-content
+			h1
+				color: #707070
+				font-size: 20px
+				font-family: 'OpenSans-Bold'
+			p
+				color: #707070
+				font-size: 14px
+				font-family: 'PT-Sans-Regular'
+		.nutrition
+			width: 195px
+			h1
+				color: #707070
+				font-size: 20px
+				font-family: 'OpenSans-Bold'
+			.table-haracter
+				.block-table
+					display: flex
+					margin-bottom: -8px
+					align-items: center
+					justify-content: space-between
+					p
+						color: #707070
+						font-size: 14px
+						margin-top: 3px
+						margin-bottom: 15px
+						font-family: 'PT-Sans-Regular'
+					span
+						min-width: 50px
+						// display: flex
+						text-align: right
+						color: #707070
+						font-size: 14px
+						font-family: 'PT-Sans-Regular'
+				.line-horizontal
+					width: 100%
+					height: 1px
+					opacity: 0.25
+					cursor: pointer
+					background: #afafaf

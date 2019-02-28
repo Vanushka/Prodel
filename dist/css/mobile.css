@@ -375,3 +375,67 @@
     z-index: 10;
   }
 }
+@media screen and (max-device-width: 768px) {
+  .container-product {
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 300px;
+    max-width: 100%;
+  }
+  .container-product .head-product-block {
+    width: 100%;
+    margin-top: -100px;
+    min-width: auto;
+  }
+  .container-product .head-product-block .line-links .bread-crumbs-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .container-product .head-product-block .line-links .bread-crumbs-block span {
+    -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+  }
+  .container-product .head-product-block .line-links a.prev,
+  .container-product .head-product-block .line-links a.next {
+    height: 18px;
+    text-align: center;
+    margin: 15px auto;
+  }
+  .container-product .head-product-block .product-block .img-product {
+    width: 90%;
+    height: auto;
+  }
+  .container-product .head-product-block .product-block .block-price-and-count {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .container-product .head-product-block .product-block .block-price-and-count p.price {
+    margin-right: 0;
+  }
+  .container-product .head-product-block .product-block .block-price-and-count .product-count {
+    margin-bottom: 30px;
+  }
+  .container-product .head-product-block .product-block .block-price-and-count a.add {
+    margin-left: 0;
+  }
+  .container-about-product {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+  .container-about-product .inside-container-about {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+  .container-about-product .inside-container-about .product-description {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container-about-product .inside-container-about .nutrition {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

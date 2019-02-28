@@ -240,7 +240,7 @@
 				justify-content: center
 
 
-//--WATER-PAGE--
+//--WATER-PAGE--&--VEGETABLES-PAGE
 
 @media screen and (max-device-width: 768px)
 	.catalog-block-fon
@@ -264,3 +264,52 @@
 			#waterProducts
 				.good
 					z-index: 10
+
+//--PRODUCT-PAGE--
+
+@media screen and (max-device-width: 768px)
+	.container-product
+		margin: 0 auto
+		margin-top: 150px
+		margin-bottom: 300px
+		max-width: 100%
+		.head-product-block
+			width: 100%
+			margin-top: -100px
+			min-width: auto
+			.line-links
+				.bread-crumbs-block
+					display: flex
+					flex-direction: column
+					span
+						transform: rotate(90deg)
+				a.prev, a.next
+					height: 18px
+					text-align: center
+					margin: 15px auto
+			.product-block
+				.img-product
+					width: 90%
+					height: auto
+				.block-price-and-count
+					flex-direction: column
+					p.price
+						margin-right: 0
+					.product-count
+						margin-bottom: 30px
+					a.add
+						margin-left: 0
+	.container-about-product
+		width: 100%
+		max-width: 100%
+		display: block
+		.inside-container-about
+			width: 100%
+			max-width: 100%
+			display: block
+			.product-description
+				width 90%
+				margin: 0 auto
+			.nutrition
+				width: 90%
+				margin: 0 auto
