@@ -56,6 +56,7 @@
   width: 383px;
   height: 385px;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 .container-product .head-product-block .product-block .img-product img {
   width: 100%;
@@ -71,7 +72,15 @@
 .container-product .head-product-block .product-block .block-price-and-count p.price {
   font-size: 26px;
   margin-right: 35px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
   font-family: 'OpenSans-Bold';
+}
+.container-product .head-product-block .product-block .block-price-and-count p.price span {
+  font-weight: 800;
+  font-family: 'OpenSans-Light';
 }
 .container-product .head-product-block .product-block .block-price-and-count .product-count {
   -ms-flex-align: center;
@@ -104,16 +113,16 @@
   background: #fff;
 }
 .container-product .head-product-block .product-block .block-price-and-count .product-count p {
-  width: 40px;
+  width: 42px;
   height: 30px;
   padding-top: 8px;
   margin: 3px 10px;
   font-size: 15px;
   font-weight: 400;
-  color: #4a4a4a;
+  color: #000;
   border-radius: 10px;
-  background-color: #c4c4c4;
-  font-family: 'OpenSans';
+  background-color: #f1f1f1;
+  font-family: 'OpenSans-Bold';
 }
 .container-product .head-product-block .product-block .block-price-and-count .product-count a.plus {
   width: 27px;

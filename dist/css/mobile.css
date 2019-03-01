@@ -57,13 +57,13 @@
     height: auto;
   }
   body header #header .navBurger {
-    z-index: 10;
+    z-index: 100;
     display: block !important;
     position: fixed;
     right: 20px;
     top: 20px;
     cursor: pointer;
-    background: #111;
+    background: #fff;
     box-sizing: border-box;
     background-clip: content-box;
     width: 30px;
@@ -78,7 +78,7 @@
   body header #header .navBurger:after {
     content: "";
     position: absolute;
-    background: #111;
+    background: #fff;
     height: 2px;
     width: 100%;
     right: 0;
@@ -91,6 +91,13 @@
     top: -10px;
   }
   body header #header .navBurger:after {
+    bottom: -10px;
+    width: 90%;
+  }
+  body header #header .navBurger:after:before {
+    top: -10px;
+  }
+  body header #header .navBurger:after:after {
     bottom: -10px;
     width: 90%;
   }
@@ -107,6 +114,70 @@
     width: 110%;
   }
   body header #header .navBurger.active:after {
+    bottom: 0;
+    -ms-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    background: #eee;
+    width: 110%;
+  }
+  body header #header .downBurger {
+    z-index: 100;
+    display: block !important;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    background: #111;
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 30px;
+    height: 24px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    transition: all 0.25s ease-in-out;
+  }
+  body header #header .downBurger:before,
+  body header #header .downBurger:after {
+    content: "";
+    position: absolute;
+    background: #111;
+    height: 2px;
+    width: 100%;
+    right: 0;
+    will-change: rotate;
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    transition: all 0.5s ease;
+  }
+  body header #header .downBurger:before {
+    top: -10px;
+  }
+  body header #header .downBurger:after {
+    bottom: -10px;
+    width: 90%;
+  }
+  body header #header .downBurger:after:before {
+    top: -10px;
+  }
+  body header #header .downBurger:after:after {
+    bottom: -10px;
+    width: 90%;
+  }
+  body header #header .downBurger.active {
+    background: transparent;
+    background-clip: content-box;
+    z-index: 1000;
+  }
+  body header #header .downBurger.active:before {
+    -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+    top: 0;
+    background: #eee;
+    width: 110%;
+  }
+  body header #header .downBurger.active:after {
     bottom: 0;
     -ms-transform: rotate(-135deg);
         transform: rotate(-135deg);
@@ -369,12 +440,19 @@
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .container-catalog .sale .filter-block .filter {
+    margin-right: 35%;
+  }
   .container-catalog .sale .filter-block .filter,
   .container-catalog .sale .filter-block .price {
     z-index: 10;
   }
   .container-catalog .sale #waterProducts .good {
     z-index: 10;
+    width: 175px;
+  }
+  .container-catalog .sale #waterProducts .good a .good-text p {
+    font-size: 15px;
   }
 }
 @media screen and (max-device-width: 768px) {

@@ -44,7 +44,7 @@ if ($(window).width() >= 768) {
 
 	if ($(window).width() >= 768) {
 		$('#popularProducts').slick({
-			rows: 1,
+			rows: 2,
 			slidesToShow: 6,
 			infinite: true,
 			draggable: true,
@@ -58,6 +58,7 @@ if ($(window).width() >= 768) {
 		});
 	} else {
 		$('#popularProducts').slick({
+			rows: 2,
 			arrows: false,
 			lazyLoad: 'ondemand',
 			infinite: true,
@@ -149,6 +150,17 @@ if ($(window).width() >= 768) {
 			slidesToScroll: 1,
 		});
 	};
+
+	$(window).scroll(function() {
+		var top = $(this).scrollTop();
+		if ( top >= 200 ) {
+			$("#navToggle").removeClass("navBurger");
+			$("#navToggle").addClass("downBurger");
+		} else if ( top <= 200 ) {
+			$(".navBurger").removeClass("downBurger");
+			$("#navToggle").addClass("navBurger");
+		}
+	});
 
 	$("#navToggle").click(function() {
 		$(this).toggleClass("active");

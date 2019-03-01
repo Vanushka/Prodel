@@ -14,9 +14,9 @@
 .catalog-block-fon-vegetables:after {
   content: "";
   width: 100%;
-  height: 410px;
+  height: 470px;
   position: absolute;
-  margin-top: 50px;
+  margin-top: -10px;
   background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.25) 28%, rgba(246,246,245,0.5) 60%, #fff 100%);
 }
 .catalog-block-fon-vegetables .headline {
@@ -39,6 +39,7 @@
   margin-right: 15px;
 }
 .catalog-block-fon-vegetables .headline h1 {
+  letter-spacing: 2px;
   font-size: 26px;
   font-family: 'OpenSans-Bold';
 }
@@ -75,36 +76,39 @@
   width: 49px;
   height: 16px;
   padding: 9px 5px;
-  color: #fff;
+  color: rgba(255,255,255,0.7);
   text-align: center;
   border-radius: 10px;
   font-size: 13px;
   transition: all 0.3s ease;
   font-family: 'PT-Sans-Regular';
-  background: rgba(112,112,112,0.5);
+  background: rgba(112,112,112,0.2);
 }
 .container-catalog .sale .filter-block a.filter:hover {
   transition: all 0.3s ease;
-  background: #707070;
+  background: rgba(112,112,112,0.5);
 }
 .container-catalog .sale .filter-block .price {
   width: 76px;
   height: 16px;
   padding: 9px 5px;
-  color: #fff;
+  color: rgba(255,255,255,0.7);
   text-align: center;
   border-radius: 10px;
   font-size: 13px;
   transition: all 0.3s ease;
   font-family: 'PT-Sans-Regular';
-  background: rgba(112,112,112,0.5);
+  background: rgba(112,112,112,0.2);
 }
 .container-catalog .sale .filter-block .price svg {
   margin-left: 14px;
 }
+.container-catalog .sale .filter-block .price svg rect {
+  fill: rgba(255,255,255,0.7);
+}
 .container-catalog .sale .filter-block .price:hover {
   transition: all 0.3s ease;
-  background: #707070;
+  background: rgba(112,112,112,0.5);
 }
 .container-catalog .sale #waterProducts {
   width: 100%;
@@ -153,8 +157,8 @@
   color: #000;
   margin: 0 auto;
   font-size: 15px;
-  text-align: center;
-  font-family: 'PT-Sans-Regular';
+  letter-spacing: 0.3px;
+  font-family: 'OpenSans-Light';
 }
 .container-catalog .sale #waterProducts .good a .good-text p {
   margin: 0;

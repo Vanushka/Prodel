@@ -21,7 +21,61 @@
 			#header
 				height: auto
 				.navBurger
-					z-index: 10
+					z-index: 100
+					display block !important
+					position: fixed
+					right: 20px
+					top: 20px
+					cursor: pointer
+					background: #fff
+					box-sizing: border-box
+					background-clip: content-box
+					width: 30px
+					height: 24px
+					border-top: 11px solid transparent
+					border-bottom: 11px solid transparent
+					-webkit-transform: rotate(0deg)
+					transform: rotate(0deg)
+					transition: all 0.25s ease-in-out
+					&:before, &:after
+						content: ""
+						position: absolute
+						background: #fff
+						height: 2px
+						width: 100%
+						right: 0
+						will-change: rotate
+						-webkit-transform: rotate(0deg)
+						transform: rotate(0deg)
+						transition: all 0.5s ease
+					&:before
+						top: -10px
+					&:after
+						bottom: -10px
+						width: 90%
+						&:before
+							top: -10px
+						&:after
+							bottom: -10px
+							width: 90%
+					&.active
+						background: transparent
+						background-clip: content-box
+						z-index 1000
+						&:before
+							-webkit-transform: rotate(135deg)
+							transform: rotate(135deg)
+							top: 0
+							background: #eee
+							width: 110%
+						&:after
+							bottom: 0
+							-webkit-transform: rotate(-135deg)
+							transform: rotate(-135deg)
+							background: #eee
+							width: 110%
+				.downBurger
+					z-index: 100
 					display block !important
 					position: fixed
 					right: 20px
@@ -53,6 +107,11 @@
 					&:after
 						bottom: -10px
 						width: 90%
+						&:before
+							top: -10px
+						&:after
+							bottom: -10px
+							width: 90%
 					&.active
 						background: transparent
 						background-clip: content-box
@@ -259,11 +318,18 @@
 			.filter-block
 				width: 100%
 				justify-content: space-around
+				.filter
+					margin-right: 35%
 				.filter, .price
 					z-index: 10
 			#waterProducts
 				.good
 					z-index: 10
+					width: 175px
+					a
+						.good-text
+							p
+								font-size: 15px
 
 //--PRODUCT-PAGE--
 

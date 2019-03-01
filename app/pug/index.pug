@@ -52,7 +52,7 @@ html
 			.sale 
 				h1 WATER
 				.all-list
-					a See all products
+					a Show 524 items
 				#water  
 					each val in viewedfoods 
 						.good  
@@ -71,7 +71,7 @@ html
 			.sale 
 				h1 FRUITS
 				.all-list
-					a See all products
+					a Show 114 items
 				#fruits
 					each val in viewedfoods 
 						.good  
@@ -90,12 +90,12 @@ html
 			.sale 
 				h1 MILK 
 				.all-list
-					a See all products
+					a Show 541 items
 				#milk
 					each val in viewedfoods 
 						.good  
 							a(href="javascript:openProductDetail()")
-								.good-text 
+								.good-text
 									p= val.text
 								.good-img 
 									img(src=val.img)
